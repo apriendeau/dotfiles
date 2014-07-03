@@ -1,0 +1,8 @@
+""""""""""""""""""
+" NerdTree Plugin
+""""""""""""""""""
+" command NT :NERDTreeToggle
+" command NTF :NERDTreeFind
+
+nmap <silent> <leader><Tab> :NERDTreeToggle<CR>
+nmap <silent> <leader>n :NERDTreeFind<CR>

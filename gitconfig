@@ -1,0 +1,10 @@
+[filter "media"]
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
+[user]
+  name = Austin Riendeau
+  email = austin@apriendeau.com
+[core]
+  editor = vim
+[push]
+  default = simple

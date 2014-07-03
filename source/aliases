@@ -1,0 +1,22 @@
+# aliases
+alias v='vagrant'
+
+alias tree='tree -C -I node_modules'
+
+#github
+alias gco='git checkout'
+alias gst='git status'
+alias gadd='git add'
+alias gcom='git commit'
+alias gpush='git push'
+
+#chrome-cli
+alias chrome='chrome-cli'
+# elasticsearch
+alias elasticsearch='elasticsearch --config=/usr/local/Cellar/elasticsearch/1.2.1/config/elasticsearch.yml'
+alias elasticsearch_cmd='elasticsearch'
+alias es='es -u localhost:9200'
+alias es_cmd='es'
+
+# cowsay
+alias cowsay='cowsay -f ghostbusters'

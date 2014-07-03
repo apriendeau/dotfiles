@@ -1,0 +1,15 @@
+# Vagrant
+export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
+export VAGRANT_VMWARE_FUSION_APP="/Applications/VMware Fusion.app"
+
+# ansible settings
+export ANSIBLE_COW_SELECTION=tux
+
+# User configuration
+export EDITOR=subl
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/opt/ruby/bin:$HOME/.rvm/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin"
+# export MANPATH="/usr/local/man:$MANPATH"
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
