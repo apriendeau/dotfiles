@@ -5,11 +5,10 @@ export VAGRANT_VMWARE_FUSION_APP="/Applications/VMware Fusion.app"
 # ansible settings
 export ANSIBLE_COW_SELECTION=tux
 
+export DEVLOCAL=/usr/local
+
 # User configuration
 export EDITOR=subl
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/opt/ruby/bin:$HOME/.rvm/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin"
-# export MANPATH="/usr/local/man:$MANPATH"
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+export PATH="$DEVLOCAL/bin:$DEVLOCAL/sbin:$DEVLOCAL/opt/ruby/bin:$HOME/.rvm/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin"
+export GOROOT=$DEVLOCAL/go
+export PATH=$PATH:$GOROOT/bin
