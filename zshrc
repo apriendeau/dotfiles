@@ -8,8 +8,8 @@ ZSH=/Users/austin/.oh-my-zsh
 ZSH_THEME="norm-custom"
 
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="subl ~/.zshrc"
+alias ohmyzsh="subl ~/.oh-my-zsh"
 
 # Set this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -40,12 +40,12 @@ ZSH_THEME="norm-custom"
 # Uncomment following line if you want to the command execution time stamp shown
 # in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="dd.mm.yyyy"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git nvm vagrant vundle cp gem sudo redis-cli go osx brew)
+plugins=(git nvm vagrant cp gem sudo redis-cli go osx brew docker git knife rvm scala ssh-agent sublime sudo supervisor systemd vagrant web-search)
 
 source $HOME/.source/aliases
 source $HOME/.source/vars
@@ -62,3 +62,5 @@ source $ZSH/oh-my-zsh.sh
 
 ssh-add $HOME/.ssh/dev-staging-00.pem &> /dev/null
 ~/.vagrant.d/insecure_private_key &> /dev/null
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
