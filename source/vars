@@ -7,6 +7,9 @@ export ANSIBLE_COW_SELECTION=tux
 
 export USRLOCAL=/usr/local
 
+#Docker Host
+export DOCKER_HOST=spider:2375
+
 # User configuration
 export EDITOR=subl
 export PATH=":$GOROOT/bin:$GOPATH/bin:$USRLOCAL/bin:$USRLOCAL/sbin:$USRLOCAL/opt/ruby/bin:$HOME/.rvm/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin"

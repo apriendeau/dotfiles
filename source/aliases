@@ -1,13 +1,17 @@
 # aliases
 alias v='vagrant'
+alias b='brew'
+alias g='git'
 alias vi='nvim'
 alias vim='nvim'
+
 alias tree='tree -C -I node_modules'
 
 #node
 alias node='node --harmony'
 alias nodemon='nodemon --harmony'
-#git
+
+#github
 alias gco='git checkout'
 alias gst='git status'
 alias gadd='git add'
