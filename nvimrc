@@ -37,7 +37,7 @@ NeoBundle 'vim-scripts/Align'
 NeoBundle 'hlissner/vim-multiedit'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'nsf/gocode', {'rtp': 'vim/'}
-
+NeoBundle 'fatih/vim-go'
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 
@@ -66,6 +66,7 @@ source $HOME/.vim/vim_mappings
 
 set list listchars=tab:»·,trail:· " show extra space characters
 
+set rtp+=$GOROOT/misc/vim
 
 " Store temporary files in a central spot
 set backup
