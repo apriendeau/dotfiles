@@ -36,8 +36,10 @@ NeoBundle 'ciaranm/inkpot'
 NeoBundle 'vim-scripts/Align'
 NeoBundle 'hlissner/vim-multiedit'
 NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'SirVer/ultisnips'
+NeoBundle 'fatih/vim-go'
+
 " You can specify revision/branch/tag.
-NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 
 " Required:
 call neobundle#end()
@@ -50,24 +52,26 @@ filetype plugin indent on
 NeoBundleCheck
 
 set number
-set background=dark
+set background=light
 set mouse=a
 set tabstop=2
 set expandtab
 syntax on
+color candy
 " set relativenumber
 set backspace=indent,eol,start
-color candy
+set noerrorbells visualbell t_vb=
 source $HOME/.vim/vim_settings
 source $HOME/.vim/vim_commands
 source $HOME/.vim/vim_mappings
 
-set list listchars=tab:»·,trail:· " show extra space characters
+" set list listchars=tab:»·,trail:· " show extra space characters
 
+set rtp+=$GOROOT/misc/vim
 
 " Store temporary files in a central spot
-set backup
-set backupdir=~/.backups,~/.tmp,~/tmp,/var/tmp,/tmp " where to put backup
+" set backup
+" set backupdir=~/.backups,~/.tmp,~/tmp,/var/tmp,/tmp " where to put backup
 " files
 set directory=~/.backups,~/.tmp,~/tmp,/var/tmp,/tmp " where to put swap  files
 set backupskip=/tmp/*,/private/tmp/* "do not backup when editing files in these directories
