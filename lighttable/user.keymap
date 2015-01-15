@@ -1,0 +1,9 @@
+;; Your file has been converted to the new flat format.
+;; Conversion does not preserve comments or indentation.
+;; File is backed up at /Users/austin/Library/Application Support/LightTable/User/user.keymap.bak
+[
+ [:app "cmd-shift-a" :workspace.show]
+ [:app "cmd-t" :navigate-workspace]
+ [:app "cmd-/" :toggle-comment-selection]
+ [:app "cmd-d" :editor.sublime.selectNextOccurrence]
+]

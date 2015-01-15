@@ -1,0 +1,18 @@
+;; Your file has been converted to the new flat format.
+;; Conversion does not preserve comments or indentation.
+;; File is backed up at /Users/austin/Library/Application Support/LightTable/User/user.behaviors.bak
+[
+ [:app :lt.objs.sidebar.workspace/workspace.open-on-start]
+ [:app :lt.objs.style/set-skin "new-dark"]
+ [:editor :lt.objs.editor/no-wrap]
+ [:editor :lt.objs.style/set-theme "austin"]
+ [:editor.clojure :lt.plugins.clojure/print-length 1000]
+ [:editor.go :lt.plugins.go/change-gofmt-command "/Users/austin/Go/bin/goimports -w=true"]
+ [:editor.go :lt.plugins.go/change-gobuild-command "go build -o"]
+ [:editor.go :lt.plugins.go/change-gorun-command "go run"]
+ [:editor.go :lt.plugins.go/change-gotest-command "go test"]
+ [:editor.go :lt.plugins.go/fmt-on-save]
+ [:editor :lt.objs.style/font-settings "Menlo" 13 1]
+ [:editor.go :lt.objs.editor/tab-settings true 4, 4]
+ [:editor :lt.objs.editor/line-numbers]
+]
