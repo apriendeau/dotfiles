@@ -1,7 +1,9 @@
 Align
 Command-T
 ack.vim
+candy.vim
 ctrlp.vim
+inkpot
 jshint.vim
 mustache.vim
 neobundle.vim
