@@ -47,16 +47,15 @@ filetype plugin indent on
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
 NeoBundleCheck
-
-set number
 set background=dark
+set number
 set mouse=a
 set tabstop=2
 set expandtab
 syntax on
 " set relativenumber
 set backspace=indent,eol,start
-color inkpot
+colorscheme mizore
 
 set splitbelow
 set splitright

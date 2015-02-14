@@ -31,6 +31,8 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'vim-scripts/nginx.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'vim-scripts/candy.vim'
+NeoBundle 'ciaranm/inkpot'
 NeoBundle 'vim-scripts/Align'
 NeoBundle 'hlissner/vim-multiedit'
 NeoBundle 'scrooloose/nerdcommenter'
@@ -45,7 +47,7 @@ filetype plugin indent on
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
 NeoBundleCheck
-
+set background=dark
 set number
 set mouse=a
 set tabstop=2
@@ -53,13 +55,14 @@ set expandtab
 syntax on
 " set relativenumber
 set backspace=indent,eol,start
-color inkpot
+colorscheme mizore
+
+set splitbelow
+set splitright
+
 source $HOME/.vim/vim_settings
 source $HOME/.vim/vim_commands
 source $HOME/.vim/vim_mappings
-
-set list listchars=tab:»·,trail:· " show extra space characters
-
 
 " Store temporary files in a central spot
 set backup
@@ -87,3 +90,5 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 
 hi IndentGuidesOdd  ctermbg=black
 hi IndentGuidesEven ctermbg=darkgrey
+
+set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
