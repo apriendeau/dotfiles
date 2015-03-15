@@ -1,31 +1,52 @@
+""""""""""""
+" Nerdtree
+""""""""""""
+let NERDTreeIgnore = ['^\.git$', 'node_modules']
+
+let NERDTreeShowHidden=1
+let NERDTreeMouseMode=1
+
+"""""""""""""""""
+" Golang Settings
 """"""""""""""""""
-" NerdTree Plugin
-""""""""""""""""""
-" command NT :NERDTreeToggle
-" command NTF :NERDTreeFind
+au FileType go nmap <Leader>s <Plug>(go-implements)
+au FileType go nmap <Leader>i <Plug>(go-info)
 
-nmap <silent> <leader>n :NERDTreeFind<CR>
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
 
-" au FileType go nmap <Leader>s <Plug>(go-implements)
-" au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
 
-" au FileType go nmap <Leader>gd <Plug>(go-doc)
-" au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
 
-" au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
-
-" au FileType go nmap <leader>r <Plug>(go-run)
-" au FileType go nmap <leader>b <Plug>(go-build)
-" au FileType go nmap <leader>t <Plug>(go-test)
-" au FileType go nmap <leader>c <Plug>(go-coverage)
-
-" au FileType go nmap <Leader>e <Plug>(go-rename)
+au FileType go nmap <Leader>e <Plug>(go-rename)
 
 let g:go_fmt_command = "goimports"
 
-" ==================== NerdTree ====================
-" Open nerdtree in current dir, write our own custom function because
-" NerdTreeToggle just sucks and doesn't work for buffers
+let g:go_highlight_methods = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
+" Turn off Matching paren highlighting because its annoying.
+let loaded_matchparen = 0
+
+"""""""""""""
+" Tabularize
+"""""""""""""
+nmap <Leader>t= :Tabularize /=<CR>
+vmap <Leader>t= :Tabularize /=<CR>
+nmap <Leader>t: :Tabularize /:\zs<CR>
+vmap <Leader>t: :Tabularize /:\zs<CR>
+
+
+"""""""""""
+" NerdTree
+"""""""""""
 function! g:NerdTreeFindToggle()
     if nerdtree#isTreeOpen()
         exec 'NERDTreeClose'
@@ -37,12 +58,23 @@ endfunction
 " For toggling
 noremap <Leader><Tab> :call g:NerdTreeFindToggle()<CR>
 
+""""""""""""""""""
 " Vertical splits
-noremap <Leader>v :vsp<CR>
-noremap <Leader>h :hsp<CR>
+""""""""""""""""""
+noremap <Leader>h :vsp<CR>
+noremap <Leader>v :sp<CR>
 
+""""""""""""
 " Split Nav
+""""""""""""
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+nnoremap <C-S-Right> <esc>$
+nnoremap <C-S-Left> <esc>^
+
+
+nnoremap <Leader>/ <C-_>
+
+map <Leader><cc> <C-_><C-_>
