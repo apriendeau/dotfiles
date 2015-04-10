@@ -39,7 +39,7 @@ NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'tpope/vim-surround'
-NeoBundle 'saltstack/salt-vim'
+NeoBundle 'Chiel92/vim-autoformat'
 
 " Required:
 call neobundle#end()
@@ -56,6 +56,7 @@ set background=dark
 set mouse=a
 set tabstop=4
 set shiftwidth=0
+set relativenumber
 syntax on
 
 " Javascript settings
@@ -66,7 +67,7 @@ au FileType html set shiftwidth=2
 
 "set relativenumber
 set backspace=indent,eol,start
-colorscheme ausokai
+color ausokai
 
 set splitright
 
@@ -76,15 +77,15 @@ match OverLength /\%100v.\+/
 source $HOME/.vim/vim_settings
 source $HOME/.vim/vim_commands
 source $HOME/.vim/vim_mappings
-source $HOME/.vim/vim_syntax
+
 " Store temporary files in a central spot
 "
 set backup
 set backupdir=~/.backups,~/.tmp,~/tmp,/var/tmp,/tmp " where to put backup
 " files
 set directory=~/.backups,~/.tmp,~/tmp,/var/tmp,/tmp " where to put swap  files
-set backupskip=/tmp/*,/private/tmp/*
-set writebackup
+set backupskip=/tmp/*,/private/tmp/* "do not backup when editing files in these directories
+set writebackup "create a backup when saving a file, useful for when vim crashes trying to save a file
 autocmd FocusLost * :wa " save on lost focus
 
 function! s:StripWhiteSpaces()
