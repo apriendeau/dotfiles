@@ -13,8 +13,6 @@ call neobundle#begin(expand('/Users/austin/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
@@ -24,19 +22,24 @@ NeoBundle 'walm/jshint.vim'
 NeoBundle 'moll/vim-node'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'juvenn/mustache.vim'
-NeoBundle 'wincent/Command-T'
 NeoBundle 'mileszs/ack.vim'
-NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'vim-scripts/nginx.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'bling/vim-airline'
-NeoBundle 'vim-scripts/candy.vim'
-NeoBundle 'ciaranm/inkpot'
-NeoBundle 'vim-scripts/Align'
 NeoBundle 'hlissner/vim-multiedit'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'fatih/vim-go'
+NeoBundle 'SirVer/ultisnips'
+NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'vim-scripts/Auto-Pairs'
+NeoBundle 'godlygeek/tabular'
+NeoBundle 'Shougo/neocomplete'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'tomtom/tcomment_vim'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'saltstack/salt-vim'
 
 " Required:
 call neobundle#end()
@@ -47,30 +50,41 @@ filetype plugin indent on
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
 NeoBundleCheck
-set background=dark
-set number
-set mouse=a
-set tabstop=2
-set expandtab
-syntax on
-" set relativenumber
-set backspace=indent,eol,start
-colorscheme mizore
 
-set splitbelow
+set number
+set background=dark
+set mouse=a
+set tabstop=4
+set shiftwidth=0
+syntax on
+
+" Javascript settings
+au FileType js set expandtab
+au FileType js set tabstop=2
+
+au FileType html set shiftwidth=2
+
+"set relativenumber
+set backspace=indent,eol,start
+colorscheme ausokai
+
 set splitright
+
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%100v.\+/
 
 source $HOME/.vim/vim_settings
 source $HOME/.vim/vim_commands
 source $HOME/.vim/vim_mappings
-
+source $HOME/.vim/vim_syntax
 " Store temporary files in a central spot
+"
 set backup
 set backupdir=~/.backups,~/.tmp,~/tmp,/var/tmp,/tmp " where to put backup
 " files
 set directory=~/.backups,~/.tmp,~/tmp,/var/tmp,/tmp " where to put swap  files
-set backupskip=/tmp/*,/private/tmp/* "do not backup when editing files in these directories
-set writebackup "create a backup when saving a file, useful for when vim crashes trying to save a file
+set backupskip=/tmp/*,/private/tmp/*
+set writebackup
 autocmd FocusLost * :wa " save on lost focus
 
 function! s:StripWhiteSpaces()

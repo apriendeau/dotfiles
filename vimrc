@@ -66,7 +66,7 @@ au FileType html set shiftwidth=2
 
 "set relativenumber
 set backspace=indent,eol,start
-colorscheme molokai
+colorscheme ausokai
 
 set splitright
 
