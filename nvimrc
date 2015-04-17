@@ -40,6 +40,8 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'Chiel92/vim-autoformat'
+NeoBundle 'burnettk/vim-angular'
+NeoBundle 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
 
 " Required:
 call neobundle#end()
@@ -47,25 +49,25 @@ call neobundle#end()
 " Required:
 filetype plugin indent on
 
+
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 
+" Basic Settings
+set clipboard=unnamed
 set number
+set relativenumber
 set background=dark
 set mouse=a
 set tabstop=4
 set shiftwidth=0
 set relativenumber
+set laststatus=2
+let g:airline_theme='murmur'
+let g:airline_powerline_fonts = 1
 syntax on
 
-" Javascript settings
-au FileType js set expandtab
-au FileType js set tabstop=2
-
-au FileType html set shiftwidth=2
-
-"set relativenumber
 set backspace=indent,eol,start
 color ausokai
 
@@ -74,6 +76,7 @@ set splitright
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%100v.\+/
 
+source $HOME/.vim/vim_files
 source $HOME/.vim/vim_settings
 source $HOME/.vim/vim_commands
 source $HOME/.vim/vim_mappings
