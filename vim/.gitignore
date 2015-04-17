@@ -1,1 +1,3 @@
 bundle/*
+!bundle/.neobundle
+!bundle/neobundle.vim
