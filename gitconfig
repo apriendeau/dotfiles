@@ -1,10 +1,17 @@
 [filter "media"]
-  clean = git-media-clean %f
-  smudge = git-media-smudge %f
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
 [user]
-  name = Austin Riendeau
-  email = austin@apriendeau.com
+    name = Austin Riendeau
+	email = ariendeau@itriagehealth.com
 [core]
-  editor = vim
+    editor = vim
 [push]
-  default = simple
+    default = simple
+[alias]
+    addall = !"git add . && git add -u"
+    hard = !"git reset --hard"
+	head = !"git reset HEAD"
+
+[url "git@stash.itriagehealth.com:"]
+	insteadOf = https://stash.itriagehealth.com/

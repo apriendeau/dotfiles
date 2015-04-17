@@ -54,7 +54,10 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 
+" Basic Settings
+set clipboard=unnamed
 set number
+set relativenumber
 set background=dark
 set mouse=a
 set tabstop=4
@@ -65,7 +68,6 @@ let g:airline_theme='murmur'
 let g:airline_powerline_fonts = 1
 syntax on
 
-set relativenumber
 set backspace=indent,eol,start
 color ausokai
 
