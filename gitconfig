@@ -13,5 +13,8 @@
     hard = !"git reset --hard"
 	head = !"git reset HEAD"
 
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+
 [url "git@stash.itriagehealth.com:"]
 	insteadOf = https://stash.itriagehealth.com/

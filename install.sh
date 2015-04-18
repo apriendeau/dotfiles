@@ -27,6 +27,10 @@ function link {
 		rm -rf $HOME/.${file}
 		ln -s ${PWD}/${file} ${HOME}/.${file}
 	done
+	rm -rf vim/bundle/neobundle.vim
+	rm -rf vim/bundle/.neobundle
+
+	curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
 }
 
 function brew {
