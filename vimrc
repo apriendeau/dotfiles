@@ -42,6 +42,7 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'burnettk/vim-angular'
 NeoBundle 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
+NeoBundle 'apriendeau/vim-airlineish'
 
 " Required:
 call neobundle#end()
@@ -64,8 +65,8 @@ set tabstop=4
 set shiftwidth=0
 set relativenumber
 set laststatus=2
-let g:airline_theme='murmur'
-let g:airline_powerline_fonts = 1
+let g:airline_theme='airlineish'
+let g:airline_powerline_fonts = 0
 syntax on
 
 set backspace=indent,eol,start

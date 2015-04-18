@@ -1,8 +1,0 @@
-" associate Utopiafile with json filetype syntax
-autocmd BufNewFile,BufReadPost Utopiafile set filetype=json
-
-" Javascript
-autocmd FileType javascript set expandtab|set tabstop=2
-
-" Html
-autocmd FileType html set shiftwidth=2
