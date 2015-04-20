@@ -17,4 +17,4 @@
 	insteadOf = https://github.com/
 
 [url "git@stash.itriagehealth.com:"]
-	insteadOf = https://stash.itriagehealth.com/
+	insteadOf = https://stash.itriagehealth.com/scm/
