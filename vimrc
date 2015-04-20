@@ -43,6 +43,7 @@ NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'burnettk/vim-angular'
 NeoBundle 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
 NeoBundle 'apriendeau/vim-colorline'
+NeoBundle 'tmux-plugins/vim-tmux'
 
 " Required:
 call neobundle#end()

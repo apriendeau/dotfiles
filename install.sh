@@ -40,6 +40,10 @@ function brew {
 	brew update
 }
 
+function tpm {
+	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+}
+
 function essentials {
 	brew install $ESSENTIAL_APPS
 	brew install $LANGUAGES
@@ -67,6 +71,9 @@ secondary)
 	;;
 gui)
 	gui
+	;;
+tpm)
+	tpm
 	;;
 *)
 	cat <<USAGE
