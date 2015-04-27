@@ -1,7 +1,7 @@
 # aliases
 alias v='vagrant'
-alias vi='/usr/local/bin/vim'
-alias vim='/usr/local/bin/vim'
+alias vi='/usr/local/bin/nvim'
+alias vim='/usr/local/bin/nvim'
 alias tree='tree -C -I node_modules'
 alias dock='docker'
 

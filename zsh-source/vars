@@ -1,4 +1,5 @@
 # Vagrant
+#
 
 export VAGRANT_DEFAULT_PROVIDER="virtualbox"
 # export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
@@ -20,7 +21,7 @@ export GOROOT=$USRLOCAL/Cellar/go/1.4.2/libexec
 export GOPATH=$HOME/Go
 export GOBIN=$GOPATH/bin
 # export VIMRUNTIME='/usr/local/share/vim/vim74'
-#export VIMRUNTIME=/usr/local/share/nvim/runtime
+export VIMRUNTIME=/usr/local/share/nvim/runtime
 # User configuration
 export EDITOR=vim
 export PATH=":$GOROOT/bin:$GOPATH/bin:$USRLOCAL/bin:$USRLOCAL/sbin$PATH:/usr/bin:/bin:/usr/sbin:/sbin"

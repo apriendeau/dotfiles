@@ -22,6 +22,8 @@ function banner {
 }
 
 function link {
+	rm -rf ${HOME}/.nvim
+	ln -s ${PWD}/vim ${HOME}/.nvim
 	for file in $FILES; do
 		banner $COLOR_INFO "started linking" "${HOME}/.${file}"
 		rm -rf $HOME/.${file}

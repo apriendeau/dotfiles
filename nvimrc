@@ -28,7 +28,6 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'hlissner/vim-multiedit'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'fatih/vim-go'
-NeoBundle 'SirVer/ultisnips'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'Shougo/neosnippet'
@@ -47,6 +46,8 @@ call neobundle#end()
 
 " Required:
 filetype plugin indent on
+
+let g:python3_host_prog = '/usr/local/bin/python3'
 
 
 " If there are uninstalled bundles found on startup,
