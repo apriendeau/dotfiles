@@ -14,7 +14,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'elzr/vim-json'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'walm/jshint.vim'
@@ -44,13 +43,13 @@ NeoBundle 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
 NeoBundle 'apriendeau/vim-colorline'
 NeoBundle 'tmux-plugins/vim-tmux'
 NeoBundle 'saltstack/salt-vim'
+NeoBundle 'apriendeau/ausokai'
 
 " Required:
 call neobundle#end()
 
 " Required:
 filetype plugin indent on
-
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.

@@ -14,8 +14,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'elzr/vim-json'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'walm/jshint.vim'
@@ -32,9 +30,8 @@ NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'vim-scripts/Auto-Pairs'
+NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'godlygeek/tabular'
-NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tomtom/tcomment_vim'
@@ -42,6 +39,9 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'burnettk/vim-angular'
 NeoBundle 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
+NeoBundle 'apriendeau/vim-colorline'
+NeoBundle 'tmux-plugins/vim-tmux'
+NeoBundle 'saltstack/salt-vim'
 
 " Required:
 call neobundle#end()
@@ -64,8 +64,8 @@ set tabstop=4
 set shiftwidth=0
 set relativenumber
 set laststatus=2
-let g:airline_theme='murmur'
-let g:airline_powerline_fonts = 1
+let g:airline_theme='colorline'
+let g:airline_powerline_fonts = 0
 syntax on
 
 set backspace=indent,eol,start
