@@ -56,6 +56,10 @@ function gui {
 	brew cask install $GUI_APPS
 }
 
+function nvim {
+	ln -s vim/bundles/ausokai/colors/ausokai.vim /usr/local/share/nvim/runtime/colors
+}
+
 case $1 in
 link)
 	link
@@ -74,6 +78,9 @@ gui)
 	;;
 tpm)
 	tpm
+	;;
+nvim)
+	nvim
 	;;
 *)
 	cat <<USAGE

@@ -1,5 +1,5 @@
 " Vim color file
-" A Modified Monokai by Ben White
+" A Modified Monokai by Austin Riendeau
 
 set background=dark
 highlight clear
@@ -8,7 +8,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let g:colors_name = "Ausokai"
+let g:colors_name = "austin"
 
 hi Cursor ctermfg=235 ctermbg=231 cterm=NONE guifg=#272822 guibg=#f8f8f0 gui=NONE
 hi Visual ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#49483e gui=NONE
