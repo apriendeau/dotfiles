@@ -40,6 +40,7 @@ NeoBundle 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
 NeoBundle 'apriendeau/vim-colorline'
 NeoBundle 'tmux-plugins/vim-tmux'
 NeoBundle 'saltstack/salt-vim'
+NeoBundle 'sjl/vitality.vim'
 
 " Required:
 call neobundle#end()
