@@ -4,6 +4,7 @@ ZSH_THEME="norm-custom"
 source $HOME/.zsh-source/aliases
 source $HOME/.zsh-source/vars
 source $HOME/.zsh-source/keybinding
+PROG=utopia source /usr/local/share/zsh/site-functions/utopia_autocomplete.zsh
 #Autojump
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
