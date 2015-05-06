@@ -31,7 +31,8 @@ function link {
 	done
 	rm -rf vim/bundle/neobundle.vim
 	rm -rf vim/bundle/.neobundle
-
+	curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > antigen.zsh
+	source antigen.zsh
 	curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
 }
 
