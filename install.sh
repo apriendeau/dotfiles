@@ -10,7 +10,7 @@ COLOR_CMD=$(tput setaf 5 2> /dev/null)
 BANNER_FMT="$COLOR_CMD$PREFIX%s %s %s$COLOR_RESET"
 BANNER_EOL='\n'
 PWD=$(pwd)
-FILES="vim vimrc tmux.conf zsh-source zshrc oh-my-zsh nvimrc gitconfig irssi"
+FILES="vim vimrc tmux.conf zsh-source zshrc zprezto nvimrc gitconfig irssi zlogin zlogout zpreztorc zshenv"
 ESSENTIALS_APPS="vim curl git wget tree autojump autoconf automake mercurial tmux tmux-mem-cpu-load"
 LANGUAGES="python3 python rust iojs go lua"
 SECONDARY_APPS="nginx saltstack docker docker-machine docker-swarm docker-compose zeromq"
@@ -31,9 +31,13 @@ function link {
 	done
 	rm -rf vim/bundle/neobundle.vim
 	rm -rf vim/bundle/.neobundle
-	curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > antigen.zsh
-	source antigen.zsh
 	curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
+}
+
+function prezto {
+	git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+	chsh -s /bin/zsh
+	ln -s "${PWD}/prompt_austin_setup" "${HOME}/.zprezto/modules/prompt/functions"
 }
 
 function brew {

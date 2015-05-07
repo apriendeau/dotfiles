@@ -1,0 +1,41 @@
+function prompt_austin_precmd {
+  setopt LOCAL_OPTIONS
+  unsetopt XTRACE KSH_ARRAYS
+
+  # Format PWD.
+  prompt_sorin_pwd
+
+  # Get Git repository information.
+  if (( $+functions[git-info] )); then
+    git-info
+  fi
+}
+
+
+function prompt_austin_setup {
+	setopt LOCAL_OPTIONS
+	unsetopt XTRACE KSH_ARRAYS
+	prompt_opts=(cr percent subst)
+
+	# Load required functions.
+	autoload -Uz vcs_info
+	autoload -Uz add-zsh-hook
+
+  # Set git-info parameters.
+    zstyle ':prezto:module:git:info' verbose 'yes'
+    zstyle ':prezto:module:git:info:action' format ':%%B%F{yellow}%s%f%%b'
+    zstyle ':prezto:module:git:info:added' format ' %%B%F{green}✚%f%%b'
+    zstyle ':prezto:module:git:info:ahead' format ' %%B%F{yellow}⬆%f%%b'
+    zstyle ':prezto:module:git:info:behind' format ' %%B%F{yellow}⬇%f%%b'
+    zstyle ':prezto:module:git:info:branch' format ':%F{green}%b%f'
+    zstyle ':prezto:module:git:info:commit' format ':%F{green}%.7c%f'
+    zstyle ':prezto:module:git:info:deleted' format ' %%B%F{red}✖%f%%b'
+    zstyle ':prezto:module:git:info:modified' format ' %%B%F{blue}✱%f%%b'
+    zstyle ':prezto:module:git:info:position' format ':%F{red}%p%f'
+    zstyle ':prezto:module:git:info:renamed' format ' %%B%F{magenta}➜%f%%b'
+    zstyle ':prezto:module:git:info:stashed' format ' %%B%F{cyan}✭%f%%b'
+    zstyle ':prezto:module:git:info:unmerged' format ' %%B%F{yellow}═%f%%b'
+    zstyle ':prezto:module:git:info:untracked' format ' %%B%F{white}◼%f%%b'
+    PROMPT='%F{cyan}∫%f %F{green}%c%f %F{red}∴%f ${git_info:+${(e)git_info[prompt]}}%'
+}
+prompt_austin_setup "$@"
