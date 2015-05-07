@@ -22,6 +22,7 @@ function banner {
 }
 
 function link {
+	git clone --recursive https://github.com/sorin-ionescu/prezto.git "zprezto"
 	rm -rf ${HOME}/.nvim
 	ln -s ${PWD}/vim ${HOME}/.nvim
 	for file in $FILES; do
@@ -32,11 +33,6 @@ function link {
 	rm -rf vim/bundle/neobundle.vim
 	rm -rf vim/bundle/.neobundle
 	curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
-}
-
-function prezto {
-	git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-	chsh -s /bin/zsh
 	ln -s "${PWD}/prompt_austin_setup" "${HOME}/.zprezto/modules/prompt/functions"
 }
 
