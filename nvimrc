@@ -42,6 +42,9 @@ NeoBundle 'tmux-plugins/vim-tmux'
 NeoBundle 'saltstack/salt-vim'
 NeoBundle 'sjl/vitality.vim'
 NeoBundle 'mbbill/undotree'
+NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'ap/vim-css-color'
+NeoBundle 'reedes/vim-colors-pencil'
 
 " Required:
 call neobundle#end()
@@ -50,7 +53,6 @@ call neobundle#end()
 filetype plugin indent on
 
 let g:python3_host_prog = '/usr/local/bin/python3'
-
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
@@ -71,17 +73,17 @@ let g:airline_powerline_fonts = 0
 syntax on
 
 set backspace=indent,eol,start
-color ausokai
+color pencil
 
 set splitright
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%100v.\+/
 
-source $HOME/.vim/vim_files
 source $HOME/.vim/vim_settings
 source $HOME/.vim/vim_commands
 source $HOME/.vim/vim_mappings
+source $HOME/.vim/vim_syntax
 
 " Store temporary files in a central spot
 "
@@ -103,12 +105,5 @@ endfunction
 
 autocmd BufWritePre * StripWhiteSpace
 command! -range=% StripWhiteSpaces :silent call <SID>StripWhiteSpaces()
-
-let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
-
-hi IndentGuidesOdd  ctermbg=black
-hi IndentGuidesEven ctermbg=darkgrey
 
 set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim

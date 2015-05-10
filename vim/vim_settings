@@ -27,12 +27,13 @@ let NERDTreeMouseMode=1
 
 let NERDTreeAutoDeleteBuffer=1
 
-""""""""""
-" Syntax
-""""""""""
+""""""""""""""""
+" indent-guides
+""""""""""""""""
 
-au BufNewFile,BufRead vim_* set filetype=vim
-
+let g:indent_guides_auto_colors = 0
+hi IndentGuidesOdd  ctermbg=black
+hi IndentGuidesEven ctermbg=darkgrey
 
 """"""""""""
 " Syntastic

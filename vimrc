@@ -77,7 +77,6 @@ set splitright
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%100v.\+/
 
-source $HOME/.vim/vim_files
 source $HOME/.vim/vim_settings
 source $HOME/.vim/vim_commands
 source $HOME/.vim/vim_mappings
