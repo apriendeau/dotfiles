@@ -40,3 +40,15 @@ au BufNewFile,BufRead vim_* set filetype=vim
 
 let g:syntastic_html_tidy_blocklevel_tags  = [ 'slide' , 'hgroup', 'slides', 'aside', 'footer']
 
+"""""""""""
+" undotree
+"""""""""""
+
+if has('persistent_undo')
+    set undofile                  " Save undo history to file
+    set undodir=~/.vim/tmp/undo/  " undo files in folder
+    set undolevels=100000         " Maximum number of undos
+    set undoreload=100000         " Save complete files for undo on reload if it has less lines than this
+endif
+
+noremap <silent> <Leader>j :UndotreeToggle<cr><F37>

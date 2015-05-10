@@ -41,6 +41,7 @@ NeoBundle 'apriendeau/vim-colorline'
 NeoBundle 'tmux-plugins/vim-tmux'
 NeoBundle 'saltstack/salt-vim'
 NeoBundle 'sjl/vitality.vim'
+NeoBundle 'mbbill/undotree'
 
 " Required:
 call neobundle#end()
