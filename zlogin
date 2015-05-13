@@ -21,3 +21,8 @@ if (( $+commands[fortune] )); then
     print
   fi
 fi
+
+# Turns skip keywords back on
+bindkey '^[[1;5D' emacs-backward-word
+bindkey '^[[1;5C' emacs-forward-word
+
