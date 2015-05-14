@@ -24,7 +24,7 @@ export GOBIN=$GOPATH/bin
 export VIMRUNTIME=/usr/local/share/nvim/runtime
 # User configuration
 export EDITOR=vim
-export PATH=":$GOROOT/bin:$GOPATH/bin:$USRLOCAL/bin:$USRLOCAL/sbin$PATH:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH=":$GOROOT/bin:$GOPATH/bin:$USRLOCAL/bin:$USRLOCAL/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin"
 
 # GO lang configurations
 # /usr/local/Cellar/go/1.4

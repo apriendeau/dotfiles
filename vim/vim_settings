@@ -52,4 +52,10 @@ if has('persistent_undo')
     set undoreload=100000         " Save complete files for undo on reload if it has less lines than this
 endif
 
-noremap <silent> <Leader>j :UndotreeToggle<cr><F37>
+noremap <silent> <Leader>j :UndotreeToggle<cr>
+
+"""""""
+" json
+"""""""
+
+let g:vim_json_syntax_conceal = 0

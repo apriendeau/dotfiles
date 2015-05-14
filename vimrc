@@ -40,6 +40,7 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'burnettk/vim-angular'
 NeoBundle 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
+NeoBundle 'frntn/terraform-kickstart', {'rtp': '/hcl.vim'}
 NeoBundle 'apriendeau/vim-colorline'
 NeoBundle 'tmux-plugins/vim-tmux'
 NeoBundle 'saltstack/salt-vim'
