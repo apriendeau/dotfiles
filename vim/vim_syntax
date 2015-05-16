@@ -1,5 +1,6 @@
-" Salt Stack
-au FileType sls set syntax=yaml
+" map files
+au BufRead,BufNewFile *.map setfiletype yaml
+autocmd FileType map set tabstop=2 |set expandtab
 
 " Vim file settings
 au BufNewFile,BufRead vim_* set filetype=vim

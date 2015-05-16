@@ -46,6 +46,8 @@ NeoBundle 'mbbill/undotree'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'ap/vim-css-color'
 NeoBundle 'reedes/vim-colors-pencil'
+NeoBundle 'rust-lang/rust.vim'
+NeoBundle 'Valloric/YouCompleteMe'
 
 " Required:
 call neobundle#end()

@@ -45,6 +45,7 @@ NeoBundle 'apriendeau/vim-colorline'
 NeoBundle 'tmux-plugins/vim-tmux'
 NeoBundle 'saltstack/salt-vim'
 NeoBundle 'apriendeau/ausokai'
+Neobundle 'rust-lang/rust.vim'
 
 " Required:
 call neobundle#end()
