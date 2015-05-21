@@ -1,18 +1,10 @@
-""""""""""""
-" Nerdtree
-""""""""""""
-let NERDTreeIgnore = ['^\.git$', 'node_modules']
-
-let NERDTreeShowHidden=1
-let NERDTreeMouseMode=1
-
-"""""""""""""""""
+""""""""""""""""""
 " Golang Settings
 """"""""""""""""""
 au FileType go nmap <Leader>s <Plug>(go-implements)
 au FileType go nmap <Leader>i <Plug>(go-info)
 
-au FileType go nmap <Leader>gd <Plug>(go-doc)
+"au FileType go nmap <Leader>gd <Plug>(go-doc)
 au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
 
 au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
@@ -47,16 +39,20 @@ vmap <Leader>t: :Tabularize /:\zs<CR>
 """""""""""
 " NerdTree
 """""""""""
-function! g:NerdTreeFindToggle()
-    if nerdtree#isTreeOpen()
-        exec 'NERDTreeClose'
-    else
-        exec 'NERDTreeFind'
-    endif
-endfunction
+let NERDTreeIgnore = ['^\.git$', 'node_modules']
+let NERDTreeShowHidden=1
+let NERDTreeMouseMode=1
+
+"function! g:NerdTreeFindToggle()
+ "   if nerdtree#isTreeOpen()
+  "      exec 'NERDTreeClose'
+   " else
+    "    exec 'NERDTreeFind'
+    "endif
+"endfunction
 
 " For toggling
-noremap <Leader><Tab> :call g:NerdTreeFindToggle()<CR>
+noremap <Leader><Tab> :NERDTreeToggle<CR>
 
 """"""""""""""""""
 " Vertical splits

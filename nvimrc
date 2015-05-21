@@ -6,60 +6,51 @@ if has('vim_starting')
 endif
 
 " Required:
-call neobundle#begin(expand('/Users/austin/.vim/bundle'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " My Bundles here:
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'elzr/vim-json'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'walm/jshint.vim'
-NeoBundle 'moll/vim-node'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'juvenn/mustache.vim'
-NeoBundle 'mileszs/ack.vim'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'vim-scripts/nginx.vim'
-NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'hlissner/vim-multiedit'
-NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'fatih/vim-go'
-NeoBundle 'Raimondi/delimitMate'
-NeoBundle 'godlygeek/tabular'
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'Chiel92/vim-autoformat'
-NeoBundle 'burnettk/vim-angular'
-NeoBundle 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
-NeoBundle 'markcornick/vim-terraform'
-NeoBundle 'apriendeau/vim-colorline'
-NeoBundle 'tmux-plugins/vim-tmux'
-NeoBundle 'saltstack/salt-vim'
-NeoBundle 'sjl/vitality.vim'
-NeoBundle 'mbbill/undotree'
-NeoBundle 'Yggdroot/indentLine'
-NeoBundle 'ap/vim-css-color'
-NeoBundle 'reedes/vim-colors-pencil'
-NeoBundle 'rust-lang/rust.vim'
-NeoBundle 'Valloric/YouCompleteMe'
+Plug 'tpope/vim-fugitive'
+Plug 'elzr/vim-json'
+Plug 'scrooloose/nerdtree'
+Plug 'walm/jshint.vim'
+Plug 'moll/vim-node'
+Plug 'pangloss/vim-javascript'
+Plug 'juvenn/mustache.vim'
+Plug 'mileszs/ack.vim'
+Plug 'scrooloose/syntastic'
+Plug 'vim-scripts/nginx.vim'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'bling/vim-airline'
+Plug 'hlissner/vim-multiedit'
+Plug 'scrooloose/nerdcommenter'
+Plug 'fatih/vim-go'
+Plug 'Raimondi/delimitMate'
+Plug 'godlygeek/tabular'
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-surround'
+Plug 'Chiel92/vim-autoformat'
+Plug 'burnettk/vim-angular'
+Plug 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
+Plug 'markcornick/vim-terraform'
+Plug 'apriendeau/vim-colorline'
+Plug 'tmux-plugins/vim-tmux'
+Plug 'saltstack/salt-vim'
+Plug 'sjl/vitality.vim'
+Plug 'mbbill/undotree'
+Plug 'Yggdroot/indentLine'
+Plug 'ap/vim-css-color'
+Plug 'reedes/vim-colors-pencil'
+Plug 'rust-lang/rust.vim'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 
 " Required:
-call neobundle#end()
-
+call plug#end()
 " Required:
 filetype plugin indent on
 
 let g:python3_host_prog = '/usr/local/bin/python3'
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
 
 " Basic Settings
 set clipboard=unnamed
@@ -83,10 +74,10 @@ set splitright
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%100v.\+/
 
-source $HOME/.vim/vim_settings
-source $HOME/.vim/vim_commands
-source $HOME/.vim/vim_mappings
-source $HOME/.vim/vim_syntax
+source $HOME/.nvim/vim_settings
+source $HOME/.nvim/vim_commands
+source $HOME/.nvim/vim_mappings
+source $HOME/.nvim/vim_syntax
 
 " Store temporary files in a central spot
 "

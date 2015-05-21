@@ -20,10 +20,6 @@ set guicursor+=i:blinkwait0
 """"""""""""
 " Nerdtree
 """"""""""""
-let NERDTreeIgnore = ['^\.git$']
-
-let NERDTreeShowHidden=1
-let NERDTreeMouseMode=1
 
 let NERDTreeAutoDeleteBuffer=1
 

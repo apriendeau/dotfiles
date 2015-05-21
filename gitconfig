@@ -5,7 +5,7 @@
     name = Austin Riendeau
 	email = ariendeau@itriagehealth.com
 [core]
-    editor = vim
+    editor = nvim
 [push]
     default = simple
 [alias]
@@ -13,8 +13,3 @@
     hard = !"git reset --hard"
 	head = !"git reset HEAD"
 
-[url "git@github.com:"]
-	insteadOf = https://github.com/
-
-[url "git@stash.itriagehealth.com:"]
-	insteadOf = https://stash.itriagehealth.com/scm/

@@ -30,4 +30,4 @@ export PATH=":$GOROOT/bin:$GOPATH/bin:$USRLOCAL/bin:$USRLOCAL/sbin:$PATH:/usr/bi
 # /usr/local/Cellar/go/1.4
 #
 
-# $(boot2docker shellinit)
+$(boot2docker shellinit)
