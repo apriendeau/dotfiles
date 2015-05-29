@@ -43,14 +43,6 @@ let NERDTreeIgnore = ['^\.git$', 'node_modules']
 let NERDTreeShowHidden=1
 let NERDTreeMouseMode=1
 
-"function! g:NerdTreeFindToggle()
- "   if nerdtree#isTreeOpen()
-  "      exec 'NERDTreeClose'
-   " else
-    "    exec 'NERDTreeFind'
-    "endif
-"endfunction
-
 " For toggling
 noremap <Leader><Tab> :NERDTreeToggle<CR>
 

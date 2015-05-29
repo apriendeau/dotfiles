@@ -62,10 +62,12 @@ set tabstop=4
 set shiftwidth=0
 set relativenumber
 set laststatus=2
+set list
+set listchars=tab:>-,eol:$ "Make tab characters and others visible
 let g:airline_theme='colorline'
 let g:airline_powerline_fonts = 0
-syntax on
 
+syntax on
 set backspace=indent,eol,start
 color pencil
 
@@ -86,7 +88,7 @@ set backupdir=~/.backups,~/.tmp,~/tmp,/var/tmp,/tmp " where to put backup
 " files
 set directory=~/.backups,~/.tmp,~/tmp,/var/tmp,/tmp " where to put swap  files
 set backupskip=/tmp/*,/private/tmp/* "do not backup when editing files in these directories
-set writebackup "create a backup when saving a file, useful for when vim crashes trying to save a file
+set writebackup "create backup when saving a file,for when vim crashes trying to save a file
 autocmd FocusLost * :wa " save on lost focus
 
 function! s:StripWhiteSpaces()
