@@ -3,7 +3,7 @@
 	smudge = git-media-smudge %f
 [user]
     name = Austin Riendeau
-	email = ariendeau@itriagehealth.com
+	email = austin@apriendeau.com
 [core]
     editor = nvim
 [push]
