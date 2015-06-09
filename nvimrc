@@ -44,6 +44,7 @@ Plug 'ap/vim-css-color'
 Plug 'reedes/vim-colors-pencil'
 Plug 'rust-lang/rust.vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+Plug 'cespare/vim-toml'
 
 " Required:
 call plug#end()
