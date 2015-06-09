@@ -13,7 +13,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'elzr/vim-json'
 Plug 'scrooloose/nerdtree'
 Plug 'walm/jshint.vim'
-Plug 'moll/vim-node'
 Plug 'pangloss/vim-javascript'
 Plug 'juvenn/mustache.vim'
 Plug 'mileszs/ack.vim'
@@ -23,7 +22,6 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'bling/vim-airline'
 Plug 'hlissner/vim-multiedit'
 Plug 'scrooloose/nerdcommenter'
-Plug 'fatih/vim-go'
 Plug 'Raimondi/delimitMate'
 Plug 'godlygeek/tabular'
 Plug 'Shougo/neosnippet'
@@ -32,20 +30,27 @@ Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-surround'
 Plug 'Chiel92/vim-autoformat'
 Plug 'burnettk/vim-angular'
-Plug 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
-Plug 'markcornick/vim-terraform'
 Plug 'apriendeau/vim-colorline'
 Plug 'tmux-plugins/vim-tmux'
-Plug 'saltstack/salt-vim'
 Plug 'sjl/vitality.vim'
 Plug 'mbbill/undotree'
 Plug 'Yggdroot/indentLine'
 Plug 'ap/vim-css-color'
 Plug 'reedes/vim-colors-pencil'
-Plug 'rust-lang/rust.vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 Plug 'cespare/vim-toml'
+Plug 'editorconfig/editorconfig-vim'
 
+" languages
+Plug 'markcornick/vim-terraform'
+Plug 'moll/vim-node'
+Plug 'maksimr/vim-jsbeautify'
+Plug 'fatih/vim-go'
+Plug 'rust-lang/rust.vim'
+Plug 'saltstack/salt-vim'
+Plug 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'vim-scripts/closetag.vim'
 " Required:
 call plug#end()
 " Required:
@@ -63,8 +68,8 @@ set tabstop=4
 set shiftwidth=0
 set relativenumber
 set laststatus=2
-set list
-set listchars=tab:>-,eol:$ "Make tab characters and others visible
+"set list
+"set listchars=tab:>-,eol:$ "Make tab characters and others visible
 let g:airline_theme='colorline'
 let g:airline_powerline_fonts = 0
 
@@ -77,10 +82,6 @@ set splitright
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%100v.\+/
 
-source $HOME/.nvim/vim_settings
-source $HOME/.nvim/vim_commands
-source $HOME/.nvim/vim_mappings
-source $HOME/.nvim/vim_syntax
 
 " Store temporary files in a central spot
 "
@@ -104,3 +105,9 @@ autocmd BufWritePre * StripWhiteSpace
 command! -range=% StripWhiteSpaces :silent call <SID>StripWhiteSpaces()
 
 set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
+
+source $HOME/.nvim/vim_settings
+source $HOME/.nvim/vim_commands
+source $HOME/.nvim/vim_mappings
+source $HOME/.nvim/vim_syntax
+source $HOME/.nvim/vim_html

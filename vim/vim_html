@@ -1,0 +1,4 @@
+" Html
+autocmd FileType html set shiftwidth=2
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+autocmd Filetype html,xml,xsl source ~/.nvim/plugged/closetag.vim/plugin/closetag.vim

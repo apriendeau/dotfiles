@@ -5,8 +5,6 @@ autocmd FileType map set tabstop=2 |set expandtab
 au BufNewFile,BufRead vim_* set filetype=vim
 " associate Utopiafile with json filetype syntax
 autocmd BufNewFile,BufReadPost Utopiafile set filetype=json
-" Html
-autocmd FileType html set shiftwidth=2
 " Javascript
 autocmd FileType javascript set expandtab|set tabstop=2
 " Json
