@@ -27,7 +27,6 @@ Plug 'godlygeek/tabular'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'tomtom/tcomment_vim'
-Plug 'tpope/vim-surround'
 Plug 'Chiel92/vim-autoformat'
 Plug 'burnettk/vim-angular'
 Plug 'apriendeau/vim-colorline'
@@ -50,12 +49,13 @@ Plug 'rust-lang/rust.vim'
 Plug 'saltstack/salt-vim'
 Plug 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
 Plug 'cakebaker/scss-syntax.vim'
-Plug 'vim-scripts/closetag.vim'
+Plug 'othree/html5.vim'
+
 " Required:
 call plug#end()
 " Required:
 filetype plugin indent on
-
+let g:autoclose_on = 0
 let g:python3_host_prog = '/usr/local/bin/python3'
 
 " Basic Settings

@@ -1,6 +1,7 @@
 source $HOME/.zsh-source/aliases
 source $HOME/.zsh-source/keybinding
 source $HOME/.zsh-source/vars
+if which bunch > /dev/null; then eval "$(bunch shim -)"; fi
 
 PROG=utopia source /usr/local/share/zsh/site-functions/utopia_autocomplete.zsh
 #Autojump
