@@ -29,5 +29,3 @@ export PATH=":$GOROOT/bin:$GOPATH/bin:$USRLOCAL/bin:$USRLOCAL/sbin:$PATH:/usr/bi
 # GO lang configurations
 # /usr/local/Cellar/go/1.4
 #
-
-$(boot2docker shellinit)
