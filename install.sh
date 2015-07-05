@@ -15,7 +15,7 @@ ESSENTIALS_APPS="vim curl git wget tree autojump autoconf automake mercurial tmu
 LANGUAGES="python3 python rust iojs go lua"
 SECONDARY_APPS="nginx saltstack docker docker-machine docker-swarm docker-compose zeromq"
 GUI_APPS="chrome firefox iterm2 1password limechat rdio hipchat razer-synapse viscosity virtualbox"
-GUI_APPS+="virtualbox boom appcleaner transmit"
+GUI_APPS+="appcleaner transmit"
 
 function banner {
 	printf "$BANNER_FMT""$BANNER_EOL" "$COLOR_CMD$1" "$2" "$3"
