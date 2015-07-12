@@ -12,7 +12,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-eval $(docker-machine env develop | grep DOCKER_HOST)
-eval $(docker-machine env develop | grep DOCKER_MACHINE)
+
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 unset DOCKER_TLS_VERIFY
 unset DOCKER_CERT_PATH

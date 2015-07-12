@@ -30,9 +30,6 @@ function link {
 		rm -rf $HOME/.${file}
 		ln -s ${PWD}/${file} ${HOME}/.${file}
 	done
-	rm -rf vim/bundle/neobundle.vim
-	rm -rf vim/bundle/.neobundle
-	curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
 	ln -s "${PWD}/prompt_austin_setup" "${HOME}/.zprezto/modules/prompt/functions"
 }
 

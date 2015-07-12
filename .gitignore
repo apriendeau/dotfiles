@@ -5,3 +5,4 @@ vim/plugged
 tmux/tmux
 tmux/plugins
 vim/.netrwhist
+tmux/tmux-*
