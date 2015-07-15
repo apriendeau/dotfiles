@@ -8,17 +8,10 @@ export VAGRANT_DEFAULT_PROVIDER="virtualbox"
 # ansible settings
 export ANSIBLE_COW_SELECTION=tux
 
-# Docker Settings
-#export DOCKER_HOST=tcp://192.168.30.30:2375
-#export DOCKER_HOST=tcp://192.168.59.103:2376
-#export DOCKER_TLS_VERIFY=1
-#export DOCKER_CERT_PATH=/Users/austin/.boot2docker/certs/boot2docker-vm
-
-export FLEETCTL_TUNNEL=54.165.34.38
 export USRLOCAL=/usr/local
 
-export GOROOT=$USRLOCAL/Cellar/go/1.4.2/libexec
-export GOPATH=$HOME/go
+export GOROOT=$USRLOCAL/Cellar/Go/1.4.2/libexec
+export GOPATH=$HOME/Go
 export GOBIN=$GOPATH/bin
 # export VIMRUNTIME='/usr/local/share/vim/vim74'
 export VIMRUNTIME=/usr/local/share/nvim/runtime
