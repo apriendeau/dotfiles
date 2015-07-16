@@ -6,7 +6,4 @@ tmux/tmux
 tmux/plugins
 vim/.netrwhist
 tmux/tmux-*
-<<<<<<< HEAD
 **/secrets
-=======
->>>>>>> e84e9c9a5200040ab84a4c0ebb41f0a1da78be9b
