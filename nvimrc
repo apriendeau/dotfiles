@@ -41,6 +41,8 @@ Plug 'reedes/vim-colors-pencil'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 Plug 'cespare/vim-toml'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'vim-scripts/greplace.vim'
+
 """""""""""
 " languages
 """""""""""
