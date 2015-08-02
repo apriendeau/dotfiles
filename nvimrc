@@ -42,7 +42,7 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 Plug 'cespare/vim-toml'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'vim-scripts/greplace.vim'
-plug 'ingydotnet/yaml-vim'
+Plug 'ingydotnet/yaml-vim'
 
 """""""""""
 " languages
