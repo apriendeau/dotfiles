@@ -1,5 +1,5 @@
 " map files
-au BufRead,BufNewFile *.map setfiletype yaml
+au BufRead,BufNewFile *.map setfiletype yaml|set syntax=yaml
 autocmd FileType map set tabstop=2 |set expandtab
 " Vim file settings
 au BufNewFile,BufRead vim_* set filetype=vim
@@ -13,4 +13,3 @@ autocmd FileType json set expandtab|set tabstop=2
 au BufRead,BufNewFile *.hcl setfiletype terraform
 " yaml
 autocmd FileType yaml set shiftwidth=2|set tabstop=2
-
