@@ -42,7 +42,7 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 Plug 'cespare/vim-toml'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'vim-scripts/greplace.vim'
-Plug 'ingydotnet/yaml-vim'
+Plug 'Shougo/unite.vim'
 
 """""""""""
 " languages
@@ -56,6 +56,8 @@ Plug 'saltstack/salt-vim'
 Plug 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'othree/html5.vim'
+Plug 'ingydotnet/yaml-vim'
+Plug 'vim-scripts/nginx.vim'
 
 " Required:
 call plug#end()

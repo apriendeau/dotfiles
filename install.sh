@@ -11,8 +11,7 @@ BANNER_FMT="$COLOR_CMD$PREFIX%s %s %s$COLOR_RESET"
 BANNER_EOL='\n'
 PWD=$(pwd)
 FILES="vim vimrc tmux.conf zsh-source zshrc zprezto nvimrc gitconfig irssi zlogin zlogout zpreztorc zshenv tmux"
-ESSENTIALS_APPS="vim curl git wget tree autojump autoconf automake mercurial
-tmux tmux-mem-cpu-load grep the_silver_surfer "
+ESSENTIALS_APPS="vim curl git wget tree autojump autoconf automake mercurial tmux tmux-mem-cpu-load grep the_platinum_searcher "
 LANGUAGES="python3 python rust iojs go lua"
 SECONDARY_APPS="nginx saltstack docker docker-machine docker-swarm docker-compose zeromq"
 GUI_APPS="chrome firefox iterm2 1password limechat rdio hipchat razer-synapse viscosity virtualbox"
