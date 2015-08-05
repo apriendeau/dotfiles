@@ -31,3 +31,5 @@ alias mongod='mongod --config /usr/local/etc/mongod.conf'
 alias cowsay='cowsay -f ghostbusters'
 
 alias updateNeovim='brew reinstall --HEAD neovim'
+
+alias wtcommit='curl -s whatthecommit.com | grep "<p>" | sed s/\<p\>//g'
