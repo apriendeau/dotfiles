@@ -9,7 +9,7 @@
 	templatedir = ~/.git_template
 	excludesfile = ~/.gitignore_global
 [core]
-    editor = vim
+    editor = nvim
 [push]
     default = simple
 [filter "hawser"]
@@ -20,3 +20,7 @@
     addall = !"git add . && git add -u"
     hard = !"git reset --hard"
 	head = !"git reset HEAD"
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
