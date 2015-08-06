@@ -1,0 +1,12 @@
+#!/bin/bash
+
+branchPath=$(git symbolic-ref -q HEAD) # Something like refs/heads/myBranchName
+branchName=${branchPath##*/} # Get text behind the last / of the branch path
+
+# Check that this is not an amend by checking that the first line is empty
+firstLine=$(head -n1 "$1")
+if [ -z "$firstLine" ]; then
+	# Insert branch name at the start of the commit message file
+	message=$(cat "$1")
+	echo -n "[$branchName]: " "$message" > "$1"
+fi
