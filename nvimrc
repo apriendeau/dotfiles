@@ -38,7 +38,8 @@ Plug 'mbbill/undotree'
 Plug 'Yggdroot/indentLine'
 Plug 'ap/vim-css-color'
 Plug 'reedes/vim-colors-pencil'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+" Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+Plug 'Shougo/deoplete.nvim'
 Plug 'cespare/vim-toml'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'vim-scripts/greplace.vim'
