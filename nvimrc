@@ -38,8 +38,7 @@ Plug 'mbbill/undotree'
 Plug 'Yggdroot/indentLine'
 Plug 'ap/vim-css-color'
 Plug 'reedes/vim-colors-pencil'
-" Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
-Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim', { 'dir': '~/.nvim/deoplete', 'do': 'UpdateRemotePlugins' }
 Plug 'cespare/vim-toml'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'vim-scripts/greplace.vim'
@@ -113,6 +112,7 @@ set backupskip=/tmp/*,/private/tmp/*
 set writebackup
 " save on lost focus
 autocmd FocusLost * :wa
+
 """"""""""""
 " WhiteSpace
 """"""""""""

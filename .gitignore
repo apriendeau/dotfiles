@@ -7,3 +7,4 @@ tmux/plugins
 vim/.netrwhist
 tmux/tmux-*
 **/secrets
+vim/deoplete

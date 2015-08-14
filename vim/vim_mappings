@@ -14,7 +14,7 @@ vmap <Leader>t: :Tabularize /:\zs<CR>
 """""""""""
 " NerdTree
 """""""""""
-let NERDTreeIgnore = ['^\.git$', 'node_modules']
+let NERDTreeIgnore = ['^\.git$', 'node_modules', '.vendor']
 let NERDTreeShowHidden=1
 let NERDTreeMouseMode=1
 
@@ -30,10 +30,15 @@ noremap <Leader>v :sp<CR>
 """"""""""""
 " Split Nav
 """"""""""""
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+ " Easier moving between splits
+if has('nvim')
+	nmap <BS> <C-w>h
+endif
+
+nmap <C-k> :wincmd k<CR>
+nmap <C-j> :wincmd j<CR>
+nmap <C-h> :wincmd h<CR>
+nmap <C-l> :wincmd l<CR>
 nnoremap <C-S-Right> <esc>$
 nnoremap <C-S-Left> <esc>^
 
