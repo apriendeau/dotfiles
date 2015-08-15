@@ -58,5 +58,12 @@ let g:deoplete#enable_at_startup = 1
 """""""
 " json
 """""""
-
 let g:vim_json_syntax_conceal = 0
+
+"""""""""
+" grepper
+"""""""""
+nnoremap <leader>g :Grepper!<cr>
+let g:grepper = {}
+let g:grepper.tools = ['pt', 'grep', 'git', 'ag']
+let g:grepper.next_tool = '<leader>g'

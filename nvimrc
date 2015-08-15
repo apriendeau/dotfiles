@@ -41,8 +41,8 @@ Plug 'reedes/vim-colors-pencil'
 Plug 'Shougo/deoplete.nvim', { 'dir': '~/.nvim/deoplete', 'do': 'UpdateRemotePlugins' }
 Plug 'cespare/vim-toml'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'vim-scripts/greplace.vim'
 Plug 'Shougo/unite.vim'
+Plug 'mhinz/vim-grepper'
 
 """""""""""
 " languages
