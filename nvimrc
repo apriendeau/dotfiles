@@ -43,7 +43,7 @@ Plug 'cespare/vim-toml'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Shougo/unite.vim'
 Plug 'mhinz/vim-grepper'
-
+Plug 'b3niup/numbers.vim'
 """""""""""
 " languages
 """""""""""
@@ -71,13 +71,10 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 " Basic Settings
 """"""""""""""""
 set clipboard=unnamed
-set number
-set relativenumber
 set background=dark
 set mouse=a
 set tabstop=4
 set shiftwidth=0
-set relativenumber
 set laststatus=2
 set backspace=indent,eol,start
 
