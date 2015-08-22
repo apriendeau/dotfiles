@@ -13,6 +13,8 @@ export USRLOCAL=/usr/local
 export GOROOT=$USRLOCAL/opt/go/libexec
 export GOPATH=$HOME/Go
 export GOBIN=$GOPATH/bin
+export GOVENDOREXPERIMENT=1
+
 # export VIMRUNTIME='/usr/local/share/vim/vim74'
 export VIMRUNTIME=/usr/local/share/nvim/runtime
 # User configuration
