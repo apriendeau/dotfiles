@@ -44,6 +44,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'Shougo/unite.vim'
 Plug 'mhinz/vim-grepper'
 Plug 'b3niup/numbers.vim'
+
 """""""""""
 " languages
 """""""""""
@@ -58,6 +59,7 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'othree/html5.vim'
 Plug 'ingydotnet/yaml-vim'
 Plug 'vim-scripts/nginx.vim'
+Plug 'vim-scripts/groovy.vim'
 
 " Required:
 call plug#end()
