@@ -38,7 +38,6 @@ Plug 'mbbill/undotree'
 Plug 'Yggdroot/indentLine'
 Plug 'ap/vim-css-color'
 Plug 'reedes/vim-colors-pencil'
-Plug 'Shougo/deoplete.nvim', { 'dir': '~/.nvim/deoplete', 'do': 'UpdateRemotePlugins' }
 Plug 'cespare/vim-toml'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Shougo/unite.vim'
@@ -51,7 +50,7 @@ Plug 'b3niup/numbers.vim'
 Plug 'markcornick/vim-terraform'
 Plug 'moll/vim-node'
 Plug 'maksimr/vim-jsbeautify'
-Plug 'fatih/vim-go'
+Plug 'apriendeau/vim-go', { 'dir': '~/Go/src/github.com/fatih/vim-go'}
 Plug 'rust-lang/rust.vim'
 Plug 'saltstack/salt-vim'
 Plug 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
