@@ -90,8 +90,8 @@ set backspace=indent,eol,start
 """""""""
 let g:airline_theme='colorline'
 let g:airline_powerline_fonts = 0
-set colorcolumn=80
-set textwidth=80
+set colorcolumn=120
+set textwidth=120
 syntax on
 color pencil
 
