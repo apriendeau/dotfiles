@@ -16,6 +16,7 @@ LANGUAGES="python3 python rust iojs go lua"
 SECONDARY_APPS="nginx saltstack docker docker-machine docker-swarm docker-compose zeromq"
 GUI_APPS="chrome firefox iterm2 1password limechat rdio hipchat razer-synapse viscosity virtualbox"
 GUI_APPS+="appcleaner transmit"
+USRLOCAL="/usr/local/bin"
 
 function banner {
 	printf "$BANNER_FMT""$BANNER_EOL" "$COLOR_CMD$1" "$2" "$3"
@@ -27,9 +28,10 @@ function link {
 	ln -s ${PWD}/vim ${HOME}/.nvim
 	for file in $FILES; do
 		banner $COLOR_INFO "started linking" "${HOME}/.${file}"
-		rm -rf $HOME/.${file}
+		rm -rf $HOME/.${file}\
 		ln -s ${PWD}/${file} ${HOME}/.${file}
 	done
+	ln -s "${PWD}/bin/git-commitmsg" "${USRLOCAL}/git-commitmsg"
 	ln -s "${PWD}/prompt_austin_setup" "${HOME}/.zprezto/modules/prompt/functions"
 }
 

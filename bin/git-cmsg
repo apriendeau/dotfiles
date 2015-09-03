@@ -1,0 +1,41 @@
+#!/bin/bash
+
+COLOR_INFO=$(tput setaf 6 2> /dev/null)
+COLOR_WARN=$(tput setaf 3 2> /dev/null)
+COLOR_ERR=$(tput setaf 1 2> /dev/null)
+COLOR_RESET=$(tput sgr0 2> /dev/null)
+
+# variables
+branch="$(git symbolic-ref --short HEAD)"
+notGit="fatal: Not a git repository (or any of the parent directories): .git"
+args=$1
+# string formats
+helpfmt="${COLOR_INFO}Useage:\n\t%s\nEquals:\n\t%s\n${COLOR_RESET}"
+errorfmt="${COLOR_ERR}%s\n${COLOR_RESET}"
+# helper functions
+function help {
+	printf "$helpfmt" "$1" "$2"
+	exit 0
+}
+
+function error {
+	printf "$errorfmt" "$1"
+	exit 1
+}
+
+if [[ "$args" == "--help" ]] || [[ "$args" == "-h" ]]; then
+	# Print error
+	help "git cmsg \"my git commit msg\"" "git commit -m \"[\$(git symbolic-ref --short HEAD)]: my git commit message\""
+fi
+
+if [[ "$args" == "" ]]; then
+	error "Please include a message."
+fi
+
+if [[ "$branch" == "$notGit" ]]; then
+	error $notGit
+fi
+
+git commit -m "[${branch}]: ${args}"
+
+
