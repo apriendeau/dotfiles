@@ -14,7 +14,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'elzr/vim-json'
 Plug 'scrooloose/nerdtree'
-Plug 'walm/jshint.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'juvenn/mustache.vim'
 Plug 'mileszs/ack.vim'
