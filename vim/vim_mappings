@@ -47,8 +47,3 @@ nnoremap <Leader>/ <C-_>
 
 map <Leader><cc> <C-_><C-_>
 
-"""""""""
-" Numbers
-"""""""""
-
-nnoremap <Leader>n :NumbersToggle<CR>

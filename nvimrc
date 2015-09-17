@@ -41,7 +41,6 @@ Plug 'cespare/vim-toml'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Shougo/unite.vim'
 Plug 'mhinz/vim-grepper'
-Plug 'b3niup/numbers.vim'
 
 """""""""""
 " languages
@@ -93,7 +92,7 @@ set colorcolumn=120
 set textwidth=120
 syntax on
 color pencil
-
+set relativenumber
 set splitright
 
 """""""""""""""""
