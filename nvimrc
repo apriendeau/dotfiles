@@ -48,7 +48,7 @@ Plug 'mhinz/vim-grepper'
 Plug 'markcornick/vim-terraform'
 Plug 'moll/vim-node'
 Plug 'maksimr/vim-jsbeautify'
-Plug 'apriendeau/vim-go', { 'dir': '~/Go/src/github.com/fatih/vim-go'}
+Plug 'fatih/vim-go', { 'dir': '~/Go/src/github.com/fatih/vim-go'}
 Plug 'rust-lang/rust.vim'
 Plug 'saltstack/salt-vim'
 Plug 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
@@ -89,9 +89,9 @@ set backspace=indent,eol,start
 let g:airline_theme='colorline'
 let g:airline_powerline_fonts = 0
 set colorcolumn=120
-set textwidth=120
 syntax on
 color pencil
+set number
 set relativenumber
 set splitright
 
