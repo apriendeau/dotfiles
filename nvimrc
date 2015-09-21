@@ -48,7 +48,7 @@ Plug 'mhinz/vim-grepper'
 Plug 'markcornick/vim-terraform'
 Plug 'moll/vim-node'
 Plug 'maksimr/vim-jsbeautify'
-Plug 'fatih/vim-go', { 'dir': '~/Go/src/github.com/fatih/vim-go'}
+Plug 'fatih/vim-go'
 Plug 'rust-lang/rust.vim'
 Plug 'saltstack/salt-vim'
 Plug 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
