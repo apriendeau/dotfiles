@@ -10,6 +10,7 @@ vmap <Leader>t= :Tabularize /=<CR>
 nmap <Leader>t: :Tabularize /:\zs<CR>
 vmap <Leader>t: :Tabularize /:\zs<CR>
 
+nmap <Leader><S-R> gg|:retab!<CR>
 
 """""""""""
 " NerdTree
