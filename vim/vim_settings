@@ -35,8 +35,9 @@ hi IndentGuidesEven ctermbg=darkgrey
 " Syntastic
 """"""""""""
 
-let g:syntastic_html_tidy_blocklevel_tags  = [ 'slide' , 'hgroup', 'slides', 'aside', 'footer']
+let g:syntastic_html_tidy_blocklevel_tags = [ 'slide' , 'hgroup', 'slides', 'aside', 'footer']
 
+let g:syntastic_stl_format = '[%pe line:%fe]'
 """""""""""
 " undotree
 """""""""""
@@ -67,3 +68,5 @@ nnoremap <leader>g :Grepper!<cr>
 let g:grepper = {}
 let g:grepper.tools = ['pt', 'grep', 'git', 'ag']
 let g:grepper.next_tool = '<leader>g'
+
+
