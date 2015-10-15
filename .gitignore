@@ -1,6 +1,5 @@
 **/.DS_Store
 vim/.vim
-zprezto
 vim/plugged
 tmux/tmux
 tmux/plugins

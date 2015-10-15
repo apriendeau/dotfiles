@@ -10,6 +10,7 @@ COLOR_CMD=$(tput setaf 5 2> /dev/null)
 BANNER_FMT="$COLOR_CMD$PREFIX%s %s %s$COLOR_RESET"
 BANNER_EOL='\n'
 PWD=$(pwd)
+ZSH_FILES="zlogin zlogout zpreztorc zshenv"
 FILES="vim vimrc tmux.conf zsh-source zshrc zprezto nvimrc gitconfig irssi zlogin zlogout zpreztorc zshenv tmux git_template gitignore_global"
 ESSENTIALS_APPS="vim curl git wget tree autojump autoconf automake mercurial tmux tmux-mem-cpu-load grep the_platinum_searcher "
 LANGUAGES="python3 python rust iojs go lua"
@@ -30,6 +31,12 @@ function link {
 		banner $COLOR_INFO "started linking" "${HOME}/.${file}"
 		rm -rf $HOME/.${file}\
 		ln -s ${PWD}/${file} ${HOME}/.${file}
+	done
+	ln -s "${PWD}/zprezto" "${HOME}/.zprezto"
+	for file in $ZSH_FILES; do
+		banner $COLOR_INFO "started linking" "${HOME}/.${file}"
+		rm ${HOME}/.${file}
+		ln -s ${PWD}/zprezto/runcoms/${file} ${HOME}/.${file}
 	done
 	ln -s "${PWD}/bin/git-commitmsg" "${USRLOCAL}/git-commitmsg"
 	ln -s "${PWD}/prompt_austin_setup" "${HOME}/.zprezto/modules/prompt/functions"
