@@ -2,6 +2,7 @@ source $HOME/.zsh-source/aliases
 source $HOME/.zsh-source/keybinding
 source $HOME/.zsh-source/vars
 source $HOME/.zsh-source/secrets
+source $HOME/.zsh-source/functions
 # Bunch
 #if which bunch > /dev/null; then eval "$(bunch shim -)"; fi
 export PATH=${PATH}:"/Users/austin/bin/FDK/Tools/osx"

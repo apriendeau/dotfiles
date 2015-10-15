@@ -1,0 +1,11 @@
+stutopia() {
+    export UTOPIA_API=http://utopia-deploy.prv.inf.utopia.com
+    export AUTHORIA_API=http://utopia-auth.prv.inf.utopia.com
+    export PUBLISH_API=http://utopia-publish.prv.inf.utopia.com
+	export TASKS_API=http://utopia-tasks.prv.inf.utopia.com
+    utopia $@
+    unset UTOPIA_API
+    unset AUTHORIA_API
+    unset PUBLISH_API
+    unset TASKS_API
+}
