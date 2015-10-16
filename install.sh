@@ -24,14 +24,13 @@ function banner {
 }
 
 function link {
-	git clone --recursive https://github.com/sorin-ionescu/prezto.git "zprezto"
-	rm -rf ${HOME}/.nvim
-	ln -s ${PWD}/vim ${HOME}/.nvim
-	for file in $FILES; do
-		banner $COLOR_INFO "started linking" "${HOME}/.${file}"
-		rm -rf $HOME/.${file}\
-		ln -s ${PWD}/${file} ${HOME}/.${file}
-	done
+	#rm -rf ${HOME}/.nvim
+	#ln -s ${PWD}/vim ${HOME}/.nvim
+	#for file in $FILES; do
+#		banner $COLOR_INFO "started linking" "${HOME}/.${file}"
+#		rm -rf $HOME/.${file}\
+#		ln -s ${PWD}/${file} ${HOME}/.${file}
+#	done
 	ln -s "${PWD}/zprezto" "${HOME}/.zprezto"
 	for file in $ZSH_FILES; do
 		banner $COLOR_INFO "started linking" "${HOME}/.${file}"
