@@ -41,6 +41,11 @@ function link {
 	ln -s "${PWD}/prompt_austin_setup" "${HOME}/.zprezto/modules/prompt/functions"
 }
 
+function tmux {
+	ln -s "${PWD}/tmux.conf" "${HOME}/.tmux.conf"
+	ln -s "${PWD}/tmux" "${HOME}/.tmux"
+}
+
 function brew {
 	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	# install brew cask
@@ -83,6 +88,9 @@ secondary)
 	;;
 gui)
 	gui
+	;;
+tmux)
+	tmux
 	;;
 tpm)
 	tpm
