@@ -10,8 +10,8 @@ COLOR_CMD=$(tput setaf 5 2> /dev/null)
 BANNER_FMT="$COLOR_CMD$PREFIX%s %s %s$COLOR_RESET"
 BANNER_EOL='\n'
 PWD=$(pwd)
-ZSH_FILES="zlogin zlogout zpreztorc zshenv"
-FILES="vim vimrc tmux.conf zsh-source zshrc zprezto nvimrc gitconfig irssi zlogin zlogout zpreztorc zshenv tmux git_template gitignore_global"
+ZSH_FILES="zlogin zlogout zpreztorc zshenv zshrc"
+FILES="irssi"
 ESSENTIALS_APPS="vim curl git wget tree autojump autoconf automake mercurial tmux tmux-mem-cpu-load grep the_platinum_searcher "
 LANGUAGES="python3 python rust iojs go lua"
 SECONDARY_APPS="nginx saltstack docker docker-machine docker-swarm docker-compose zeromq"
@@ -22,29 +22,65 @@ USRLOCAL="/usr/local/bin"
 function banner {
 	printf "$BANNER_FMT""$BANNER_EOL" "$COLOR_CMD$1" "$2" "$3"
 }
+function banner_info {
+	printf "$BANNER_FMT""$BANNER_EOL" "$COLOR_CMD$COLOR_INFO" "$1"
+}
 
 function link {
-	#rm -rf ${HOME}/.nvim
-	#ln -s ${PWD}/vim ${HOME}/.nvim
-	#for file in $FILES; do
-#		banner $COLOR_INFO "started linking" "${HOME}/.${file}"
-#		rm -rf $HOME/.${file}\
-#		ln -s ${PWD}/${file} ${HOME}/.${file}
-#	done
-	ln -s "${PWD}/zprezto" "${HOME}/.zprezto"
-	for file in $ZSH_FILES; do
-		banner $COLOR_INFO "started linking" "${HOME}/.${file}"
-		rm ${HOME}/.${file}
-		ln -s ${PWD}/zprezto/runcoms/${file} ${HOME}/.${file}
-	done
-	ln -s "${PWD}/bin/git-commitmsg" "${USRLOCAL}/git-commitmsg"
-	ln -s "${PWD}/prompt_austin_setup" "${HOME}/.zprezto/modules/prompt/functions"
+	if [ -z "${2// }" ]; then
+		banner_info "${1} -> ${1}"
+		rm ${HOME}/.${1}
+		ln -s "${PWD}/${1}" "${HOME}/.${1}"
+	else
+		banner_info "${1} -> ${2}"
+		rm ${HOME}/.${2}
+		ln -s "${PWD}/${1}" "${HOME}/.${2}"
+	fi
 }
 
-function tmux {
-	ln -s "${PWD}/tmux.conf" "${HOME}/.tmux.conf"
-	ln -s "${PWD}/tmux" "${HOME}/.tmux"
+function link_git {
+	link gitignore_global
+	link gitconfig
+	link git_template
+	ln -s "${PWD}/bin/git-commitmsg" "${USRLOCAL}/git-commitmsg"
+
 }
+
+function link_nvim {
+	link nvimrc
+	link nvimrc vimrc
+	link vim
+	link vim nvim
+}
+
+function link_tmux {
+	link tmux.conf
+	link tmux
+}
+
+function link_zsh {
+	link zprezto
+	ln -s "${PWD}/prompt_austin_setup" "${HOME}/.zprezto/modules/prompt/functions"
+
+	for file in $ZSH_FILES; do
+		link zprezto/runcoms/${file} ${file}
+	done
+}
+function link_test {
+	banner_info "link test debugged"
+}
+
+function link_apples {
+	banner_info "linked some apples"
+}
+
+function link_all {
+	link_nvim
+	link_zsh
+	link_git
+	link_tmux
+}
+
 
 function brew {
 	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -74,8 +110,8 @@ function nvim {
 }
 
 case $1 in
-link)
-	link
+link_*)
+	$1
 	;;
 brew)
 	brew
