@@ -29,11 +29,11 @@ function banner_info {
 function link {
 	if [ -z "${2// }" ]; then
 		banner_info "${1} -> ${1}"
-		rm ${HOME}/.${1}
+		rm -rf ${HOME}/.${1}
 		ln -s "${PWD}/${1}" "${HOME}/.${1}"
 	else
 		banner_info "${1} -> ${2}"
-		rm ${HOME}/.${2}
+		rm -rf ${HOME}/.${2}
 		ln -s "${PWD}/${1}" "${HOME}/.${2}"
 	fi
 }
@@ -47,10 +47,9 @@ function link_git {
 }
 
 function link_nvim {
-	link nvimrc
-	link nvimrc vimrc
-	link vim
-	link vim nvim
+	link nvim vim
+	link nvim/init.vim vimrc
+	link nvim "config/nvim"
 }
 
 function link_tmux {

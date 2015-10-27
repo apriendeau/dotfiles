@@ -125,9 +125,9 @@ command! -range=% StripWhiteSpaces :silent call <SID>StripWhiteSpaces()
 
 set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
 
-source $HOME/.nvim/vim_settings
-source $HOME/.nvim/vim_commands
-source $HOME/.nvim/vim_mappings
-source $HOME/.nvim/vim_syntax
-source $HOME/.nvim/vim_html
-source $HOME/.nvim/vim_golang
+source $HOME/.config/nvim/vim_settings
+source $HOME/.config/nvim/vim_commands
+source $HOME/.config/nvim/vim_mappings
+source $HOME/.config/nvim/vim_syntax
+source $HOME/.config/nvim/vim_html
+source $HOME/.config/nvim/vim_golang

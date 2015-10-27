@@ -1,9 +1,9 @@
 **/.DS_Store
-vim/.vim
-vim/plugged
+nvim/.vim
+nvim/plugged
 tmux/tmux
 tmux/plugins
-vim/.netrwhist
+nvim/.netrwhist
 tmux/tmux-*
 **/secrets
-vim/deoplete
+nvim/deoplete
