@@ -39,8 +39,8 @@ function link {
 }
 
 function link_git {
-	link gitignore_global
-	link gitconfig
+	link git/gitignore_global gitignore_global
+	link git/gitconfig gitconfig
 	link git_template
 	ln -s "${PWD}/bin/git-commitmsg" "${USRLOCAL}/git-commitmsg"
 
