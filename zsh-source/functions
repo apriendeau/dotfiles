@@ -6,10 +6,9 @@ stutopia() {
 	utopia $@
 	unset UTOPIA_API
 	unset AUTHORIA_API
-	unset TASKS_API
+	unset TASK_API
 	unset PUBLISH_API
 }
-
 
 loutopia() {
 	docker=$(dm ip boot2docker)
@@ -20,6 +19,12 @@ loutopia() {
 	utopia $@
 	unset UTOPIA_API
 	unset AUTHORIA_API
-	unset TASKS_API
+	unset TASK_API
 	unset PUBLISH_API
+}
+
+dlogs() {
+	local name="$1"
+	local id=$(docker ps | grep $name | awk '{print $1}')
+	docker logs -f $id
 }
