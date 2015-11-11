@@ -43,7 +43,6 @@ function link_git {
 	link git/gitconfig gitconfig
 	link git_template
 	ln -s "${PWD}/bin/git-commitmsg" "${USRLOCAL}/git-commitmsg"
-
 }
 
 function link_nvim {
@@ -71,6 +70,19 @@ function link_test {
 
 function link_apples {
 	banner_info "linked some apples"
+}
+
+function unlink_all {
+	unlink zprezto
+	unlink .zprezto/modules/prompt/functions
+
+	for file in $ZSH_FILES; do
+		unlink ${file}
+	done
+}
+
+function unlink {
+	rm "${HOME}/.${1}"
 }
 
 function link_all {
@@ -132,6 +144,9 @@ tpm)
 	;;
 nvim)
 	nvim
+	;;
+unlink)
+	unlink_all
 	;;
 *)
 	cat <<USAGE
