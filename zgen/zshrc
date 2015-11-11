@@ -1,0 +1,36 @@
+# load zgen
+source "${HOME}/.zgen/zgen.zsh"
+
+# check if there's no init script
+if ! zgen saved; then
+    echo "Creating a zgen save"
+
+    # prezto options
+    zgen prezto editor key-bindings 'vi'
+    zgen prezto prompt theme 'austin'
+
+	zgen prezto editor dot-expansion 'no'
+
+	# prezto and modules
+    zgen prezto
+    zgen prezto git
+    zgen prezto command-not-found
+    zgen prezto syntax-highlighting
+	zgen prezto history-substring-search
+
+
+	zgen save
+fi
+
+source $HOME/.zsh-source/aliases
+source $HOME/.zsh-source/keybinding
+source $HOME/.zsh-source/vars
+source $HOME/.zsh-source/secrets
+source $HOME/.zsh-source/functions
+
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
+export NVM_DIR="/Users/austin/.nvm"
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
