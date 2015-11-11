@@ -14,6 +14,9 @@ if ! zgen saved; then
 	# prezto and modules
     zgen prezto
     zgen prezto git
+	zgen prezto tmux
+	zgen prezto osx
+	zgen prezto homebrew
     zgen prezto command-not-found
     zgen prezto syntax-highlighting
 	zgen prezto history-substring-search
