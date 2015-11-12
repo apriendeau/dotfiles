@@ -11,6 +11,8 @@ BANNER_FMT="$COLOR_CMD$PREFIX%s %s %s$COLOR_RESET"
 BANNER_EOL='\n'
 PWD=$(pwd)
 PREZTO_HOME="zgen/sorin-ionescu/prezto-master"
+USRLOCAL="/usr/local/bin"
+
 function banner {
 	printf "$BANNER_FMT""$BANNER_EOL" "$COLOR_CMD$1" "$2" "$3"
 }
@@ -39,12 +41,40 @@ function link {
 	fi
 }
 
+function link_git {
+	link git/gitignore_global gitignore_global
+	link git/gitconfig gitconfig
+	link git_template
+	ln -s "${PWD}/bin/git-commitmsg" "${USRLOCAL}/git-commitmsg"
+}
+
+function link_nvim {
+	link nvim vim
+	link nvim/init.vim vimrc
+	link nvim "config/nvim"
+	ln -s vim/bundles/ausokai/colors/ausokai.vim /usr/local/share/nvim/runtime/colors
+}
+
+function link_tmux {
+	link tmux.conf
+	link tmux
+	tpm
+}
+
+function tpm {
+	unlink tmux/plugins/tpm
+	git clone https://github.com/tmux-plugins/tpm ${HOME}/.tmux/plugins/tpm
+}
+
 function link_zsh {
 	git clone git@github.com:tarjoilija/zgen.git tmp-zgen
 	unlink zgen
 	mv tmp-zgen ${HOME}/.zgen
 	link zgen/zshrc zshrc
 	link zsh-source zsh-source
+	source ${HOME}/.zshrc
+	link_prompt
+	source ${HOME}/.zshrc
 }
 
 function link_prompt {
@@ -61,16 +91,28 @@ function link_prompt {
 
 
 case $1 in
-link)
+zsh)
 	link_zsh
 	;;
-prompt)
-	link_prompt
+nvim)
+	link_nvim
+	;;
+tmux)
+	link_tmux
+	;;
+git)
+	link_git
+	;;
+all)
+	link_git
+	link_nvim
+	link_zsh
+	link_git
 	;;
 *)
 	cat <<USAGE
 $0 [command]
-link		remove source files and symlink them to repo
+zsh		remove zsh related files and resource them
 USAGE
 	exit 64
 	;;

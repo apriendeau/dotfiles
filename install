@@ -26,73 +26,6 @@ function banner_info {
 	printf "$BANNER_FMT""$BANNER_EOL" "$COLOR_CMD$COLOR_INFO" "$1"
 }
 
-function link {
-	if [ -z "${2// }" ]; then
-		banner_info "${1} -> ${1}"
-		rm -rf ${HOME}/.${1}
-		ln -s "${PWD}/${1}" "${HOME}/.${1}"
-	else
-		banner_info "${1} -> ${2}"
-		rm -rf ${HOME}/.${2}
-		ln -s "${PWD}/${1}" "${HOME}/.${2}"
-	fi
-}
-
-function link_git {
-	link git/gitignore_global gitignore_global
-	link git/gitconfig gitconfig
-	link git_template
-	ln -s "${PWD}/bin/git-commitmsg" "${USRLOCAL}/git-commitmsg"
-}
-
-function link_nvim {
-	link nvim vim
-	link nvim/init.vim vimrc
-	link nvim "config/nvim"
-}
-
-function link_tmux {
-	link tmux.conf
-	link tmux
-}
-
-function link_zsh {
-	link zprezto
-	ln -s "${PWD}/prompt_austin_setup" "${HOME}/.zprezto/modules/prompt/functions"
-
-	for file in $ZSH_FILES; do
-		link zprezto/runcoms/${file} ${file}
-	done
-}
-function link_test {
-	banner_info "link test debugged"
-}
-
-function link_apples {
-	banner_info "linked some apples"
-}
-
-function unlink_all {
-	unlink zprezto
-	unlink .zprezto/modules/prompt/functions
-
-	for file in $ZSH_FILES; do
-		unlink ${file}
-	done
-}
-
-function unlink {
-	rm "${HOME}/.${1}"
-}
-
-function link_all {
-	link_nvim
-	link_zsh
-	link_git
-	link_tmux
-}
-
-
 function brew {
 	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	# install brew cask
@@ -100,9 +33,6 @@ function brew {
 	brew update
 }
 
-function tpm {
-	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-}
 
 function essentials {
 	brew install $ESSENTIAL_APPS
