@@ -86,7 +86,6 @@ function link_prompt {
 	git clone git@github.com:sindresorhus/pure.git ${HOME}/.$PREZTO_HOME/modules/prompt/external/pure
 	git clone git@github.com:davidjrice/prezto_powerline.git ${HOME}/.$PREZTO_HOME/modules/prompt/external/powerline
 
-	link prompt_austin_setup "$PREZTO_HOME/modules/prompt/functions/prompt_austin_setup"
 }
 
 

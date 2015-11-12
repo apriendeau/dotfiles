@@ -5,9 +5,10 @@ source "${HOME}/.zgen/zgen.zsh"
 if ! zgen saved; then
     echo "Creating a zgen save"
 
-    # prezto options
+	zgen load apriendeau/prezto-slim-prompt
+	# prezto options
     zgen prezto editor key-bindings 'vi'
-    zgen prezto prompt theme 'austin'
+    zgen prezto prompt theme 'slim'
 
 	zgen prezto editor dot-expansion 'no'
 
