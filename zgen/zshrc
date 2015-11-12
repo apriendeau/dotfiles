@@ -6,6 +6,7 @@ if ! zgen saved; then
     echo "Creating a zgen save"
 
 	zgen load apriendeau/prezto-slim-prompt
+
 	# prezto options
     zgen prezto editor key-bindings 'vi'
     zgen prezto prompt theme 'slim'
@@ -22,15 +23,14 @@ if ! zgen saved; then
     zgen prezto syntax-highlighting
 	zgen prezto history-substring-search
 
+	zgen load $HOME/.zsh-source/aliases
+	zgen load $HOME/.zsh-source/keybinding
+	zgen load $HOME/.zsh-source/vars
+	zgen load $HOME/.zsh-source/secrets
+	zgen load $HOME/.zsh-source/functions
 
 	zgen save
 fi
-
-source $HOME/.zsh-source/aliases
-source $HOME/.zsh-source/keybinding
-source $HOME/.zsh-source/vars
-source $HOME/.zsh-source/secrets
-source $HOME/.zsh-source/functions
 
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
