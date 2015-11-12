@@ -1,0 +1,52 @@
+#!/bin/bash
+
+ESSENTIALS_APPS="vim curl git wget tree autojump autoconf automake mercurial tmux tmux-mem-cpu-load grep the_platinum_searcher "
+LANGUAGES="python3 python rust node go lua"
+SECONDARY_APPS="nginx saltstack docker docker-machine docker-swarm docker-compose zeromq"
+GUI_APPS="chrome firefox iterm2 1password limechat rdio hipchat razer-synapse viscosity virtualbox appcleaner transmit"
+PREFIX='>>> '
+COLOR_RESET=$(tput sgr0 2> /dev/null)
+COLOR_INFO=$(tput setaf 6 2> /dev/null)
+COLOR_OK=$(tput setaf 2 2> /dev/null)
+COLOR_WARN=$(tput setaf 3 2> /dev/null)
+COLOR_ERR=$(tput setaf 1 2> /dev/null)
+COLOR_CMD=$(tput setaf 5 2> /dev/null)
+BANNER_FMT="$COLOR_CMD$PREFIX%s %s %s$COLOR_RESET"
+BANNER_EOL='\n'
+PWD=$(pwd)
+
+function banner {
+	printf "$BANNER_FMT""$BANNER_EOL" "$COLOR_CMD$1" "$2" "$3"
+}
+function banner_info {
+	printf "$BANNER_FMT""$BANNER_EOL" "$COLOR_CMD$COLOR_INFO" "$1"
+}
+
+function install_homebrew {
+	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	brew install caskroom/cask/brew-cask
+}
+
+function install_apps {
+	brew update
+	brew install $ESSENTIAL_APPS
+	brew install $LANGUAGES
+	brew cask install $GUI_APPS
+}
+
+case $1 in
+brew)
+	install_homebrew
+	;;
+apps)
+	install_apps
+	;;
+*)
+	cat <<USAGE
+$0 [command]
+brew		installing homebrew
+apps		install all apps
+USAGE
+	exit 64
+	;;
+esac
