@@ -6,36 +6,92 @@ COLOR_ERR=$(tput setaf 1 2> /dev/null)
 COLOR_RESET=$(tput sgr0 2> /dev/null)
 
 # variables
-branch="$(git symbolic-ref --short HEAD)"
 notGit="fatal: Not a git repository (or any of the parent directories): .git"
-args="$@"
-# string formats
-helpfmt="${COLOR_INFO}Useage:\n\t%s\nEquals:\n\t%s\n${COLOR_RESET}"
-errorfmt="${COLOR_ERR}%s\n${COLOR_RESET}"
-# helper functions
-function help {
-	printf "$helpfmt" "$1" "$2"
-	exit 0
-}
 
 function error {
-	printf "$errorfmt" "$1"
+	printf "${COLOR_ERR}%s\n${COLOR_RESET}" "$1"
 	exit 1
 }
 
-if [[ "$args" == "--help" ]] || [[ "$args" == "-h" ]]; then
-	# Print error
-	help "git cmsg \"my git commit msg\"" "git commit -m \"[\$(git symbolic-ref --short HEAD)]: my git commit message\""
-fi
+function usage {
+	cat <<USAGE
+$0 [-b <name>] [-a] [-v] [-f] [-l] [-v] <git message>
 
-if [[ "$args" == "" ]]; then
+Options:
+	-a		add the files to git commit
+	-b <name>	Branch name to deploy. Applied to all services.
+	-d		Dry run.
+	-h		Prints this information
+	-v		Verbose output.
+USAGE
+	exit 64
+}
+
+DRYRUN=0
+VERBOSE=0
+ADD=0
+FLAGS="-"
+ARGS=
+BRANCH="$(git symbolic-ref --short HEAD)"
+
+function parse_option {
+	local OPTION="$1"
+	local optarg="$2"
+
+    case $OPTION in
+		a)
+			FLAGS="${FLAGS}a"
+			;;
+		b)
+			BRANCH=$optarg
+			;;
+		d)
+			DRYRUN=1
+			;;
+		h)
+			usage
+			;;
+		v)
+			FLAGS="${FLAGS}v"
+			VERBOSE=1
+			;;
+		?)
+			usage
+			;;
+     esac
+}
+function parse {
+	local OPTIONS="ab:dhv"
+	local OPTION OPTIND OPTARG
+
+	while getopts "$OPTIONS" OPTION "$@"; do
+		parse_option "$OPTION" "$OPTARG"
+	done
+
+	ARGS="${@:$OPTIND}"
+	let OPTIND++
+
+	while getopts "$OPTIONS" OPTION "$@"; do
+		parse_option "$OPTION" "$OPTARG"
+	done
+}
+
+parse "$@"
+
+if [[ "$ARGS" == "" ]]; then
 	error "Please include a message."
 fi
 
-if [[ "$branch" == "$notGit" ]]; then
+if [[ "$BRANCH" == "$notGit" ]]; then
 	error $notGit
 fi
 
-git commit -m "[${branch}]: ${args}"
+FLAGS="${FLAGS}m"
+
+if (( DRYRUN )); then
+	echo "${COLOR_INFO}Would have ran:${COLOR_RESET} git commit ${FLAGS} \"[${BRANCH}]: ${ARGS}\""
+else
+	git commit $FLAGS "[${BRANCH}]: ${ARGS}"
+fi
 
 

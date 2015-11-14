@@ -9,6 +9,8 @@ alias dock='docker'
 alias node='node --harmony'
 alias nodemon='nodemon --harmony'
 
+alias rm="rm"
+
 #git
 alias gco='git checkout'
 alias gst='git status'
