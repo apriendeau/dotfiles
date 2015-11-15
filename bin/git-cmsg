@@ -40,6 +40,7 @@ function parse_option {
 
     case $OPTION in
 		a)
+			git add .
 			FLAGS="${FLAGS}a"
 			;;
 		b)
