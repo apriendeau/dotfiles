@@ -69,8 +69,8 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 """"""""""""""""
 " Basic Settings
 """"""""""""""""
-set clipboard=unnamed
 set background=dark
+set clipboard=unnamed
 set mouse=a
 set tabstop=4
 set shiftwidth=0
