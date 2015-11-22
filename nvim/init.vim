@@ -73,6 +73,7 @@ set background=dark
 set clipboard=unnamed
 set mouse=a
 set tabstop=4
+set noexpandtab
 set shiftwidth=0
 set laststatus=2
 set backspace=indent,eol,start
