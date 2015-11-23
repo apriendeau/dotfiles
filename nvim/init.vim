@@ -107,8 +107,7 @@ set directory=~/.backups,~/.tmp,~/tmp,/var/tmp,/tmp
 set backupskip=/tmp/*,/private/tmp/*
 "create backup when saving a file,for when vim crashes trying to save a file
 set writebackup
-" save on lost focus
-autocmd FocusLost * :wa
+" autocmd FocusLost * :wa
 
 """"""""""""
 " WhiteSpace
