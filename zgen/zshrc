@@ -23,6 +23,8 @@ if ! zgen saved; then
     zgen prezto syntax-highlighting
 	zgen prezto history-substring-search
 
+	zgen load Tarrasch/zsh-colors
+
 	zgen load $HOME/.zsh-source/aliases
 	zgen load $HOME/.zsh-source/keybinding
 	zgen load $HOME/.zsh-source/vars
