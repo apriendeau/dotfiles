@@ -1,21 +1,21 @@
 # load zgen
 source "${HOME}/.zgen/zgen.zsh"
-
+export PATH=/usr/local/bin:$PATH
 # check if there's no init script
 if ! zgen saved; then
-    echo "Creating a zgen save"
+	echo "Creating a zgen save"
 
 	zgen load apriendeau/prezto-slim-prompt
 
+	zgen prezto
 	# prezto options
-    zgen prezto editor key-bindings 'vi'
-    zgen prezto prompt theme 'slim'
+	zgen prezto editor key-bindings 'vi'
+	zgen prezto prompt theme 'slim'
 
 	zgen prezto editor dot-expansion 'no'
 
 	# prezto and modules
-    zgen prezto
-    zgen prezto git
+	zgen prezto git
 	zgen prezto tmux
 	zgen prezto osx
 	zgen prezto homebrew
