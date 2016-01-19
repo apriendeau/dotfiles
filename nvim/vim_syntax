@@ -1,6 +1,10 @@
 " map files
-au BufRead,BufNewFile *.map setfiletype yaml|set syntax=yaml
-au FileType map set tabstop=2 |set expandtab
+au BufRead,BufNewFile *.map
+	\ | setfiletype yaml
+	\ | set syntax=yaml
+
+au FileType map set tabstop=2
+	\ | set expandtab
 
 " Vim file settings
 au BufNewFile,BufRead vim_* set filetype=vim
@@ -9,10 +13,12 @@ au BufNewFile,BufRead vim_* set filetype=vim
 au BufNewFile,BufReadPost Utopiafile set filetype=json
 
 " Javascript
-au FileType javascript set expandtab|set tabstop=2
+au FileType javascript set expandtab
+	\ | set tabstop=2
 
 " Json
-au FileType json set expandtab|set tabstop=2
+au FileType json set expandtab
+	\ | set tabstop=2
 
 " HCL
 au BufRead,BufNewFile *.hcl setfiletype terraform
@@ -22,3 +28,4 @@ au FileType yaml set shiftwidth=2|set tabstop=2
 
 "dotenv
 au BufRead,BufNewFile .env* set syntax=sh
+

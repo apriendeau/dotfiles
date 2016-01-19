@@ -57,6 +57,7 @@ Plug 'othree/html5.vim'
 Plug 'ingydotnet/yaml-vim'
 Plug 'vim-scripts/nginx.vim'
 Plug 'vim-scripts/groovy.vim'
+Plug 'nvie/vim-flake8'
 
 " Required:
 call plug#end()
@@ -131,3 +132,4 @@ source $HOME/.config/nvim/vim_mappings
 source $HOME/.config/nvim/vim_syntax
 source $HOME/.config/nvim/vim_html
 source $HOME/.config/nvim/vim_golang
+source $HOME/.config/nvim/vim_python

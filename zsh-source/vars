@@ -24,5 +24,7 @@ export PATH=":$GOROOT/bin:$GOPATH/bin:$USRLOCAL/bin:$USRLOCAL/sbin:$PATH:/usr/bi
 # /usr/local/Cellar/go/1.4
 #
 
+export ANDROID_HOME=/usr/local/opt/android-sdk
+
 export XDG_CONFIG_HOME="$HOME/.config"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home"
