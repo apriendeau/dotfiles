@@ -41,6 +41,7 @@ Plug 'cespare/vim-toml'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Shougo/unite.vim'
 Plug 'mhinz/vim-grepper'
+Plug 'vim-scripts/SearchComplete'
 
 """""""""""
 " languages
