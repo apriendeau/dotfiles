@@ -1,28 +1,3 @@
-stgutopia() {
-    export UTOPIA_API=http://utopia-deploy.prv.inf.utopia.com
-	export AUTHORIA_API=http://utopia-auth.prv.inf.utopia.com
-    export PUBLISH_API=http://utopia-publish.prv.inf.utopia.com
-	export TASKS_API=http://utopia-tasks.prv.inf.utopia.com
-	utopia $@
-	unset UTOPIA_API
-	unset AUTHORIA_API
-	unset TASKS_API
-	unset PUBLISH_API
-}
-
-loutopia() {
-	docker=$(dm ip boot2docker)
-    export UTOPIA_API=http://${docker}:3535
-	export AUTHORIA_API=http://${docker}:3636
-    export PUBLISH_API=http://${docker}:3737
-	export TASKS_API=http://${docker}:3838
-	utopia $@
-	unset UTOPIA_API
-	unset AUTHORIA_API
-	unset TASKS_API
-	unset PUBLISH_API
-}
-
 did(){
 	local name="$1"
 	docker ps | grep $name | awk '{print $1}'
@@ -34,8 +9,3 @@ dlogs() {
 	docker logs -f $id
 }
 
-
-lotask() {
-	loutopia login -u austin -p Bubb1emachine!
-	loutopia tasks-schedule
-}
