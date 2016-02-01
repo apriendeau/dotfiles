@@ -7,3 +7,4 @@ nvim/.netrwhist
 tmux/tmux-*
 **/secrets
 nvim/deoplete
+nvim/.init.vim-rplugin~

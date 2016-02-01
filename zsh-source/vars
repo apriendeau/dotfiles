@@ -18,13 +18,12 @@ export GOVENDOREXPERIMENT=1
 # export VIMRUNTIME='/usr/local/share/vim/vim74'
 export VIMRUNTIME=/usr/local/share/nvim/runtime
 # User configuration
-export EDITOR=vim
+export EDITOR=nvim
+
 export PATH=":$GOROOT/bin:$GOPATH/bin:$USRLOCAL/bin:$USRLOCAL/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin"
-# GO lang configurations
-# /usr/local/Cellar/go/1.4
-#
+export PATH="$PATH:$HOME/.fzf/bin"
 
+#  Java
 export ANDROID_HOME=/usr/local/opt/android-sdk
-
 export XDG_CONFIG_HOME="$HOME/.config"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home"

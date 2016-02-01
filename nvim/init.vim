@@ -2,7 +2,7 @@
 " Be iMproved
 """""""""""""
 if has('vim_starting')
-  set nocompatible               " Be iMproved
+  set nocompatible				 " Be iMproved
 endif
 
 " Required:
@@ -42,6 +42,8 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'Shougo/unite.vim'
 Plug 'mhinz/vim-grepper'
 Plug 'vim-scripts/SearchComplete'
+Plug 'Shougo/deoplete.nvim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 """""""""""
 " languages
