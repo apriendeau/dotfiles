@@ -39,6 +39,7 @@ fi
 
 export NVM_DIR="/Users/austin/.nvm"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
 bindkey -e
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word

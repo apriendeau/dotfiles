@@ -36,14 +36,14 @@ Plug 'sjl/vitality.vim'
 Plug 'mbbill/undotree'
 Plug 'Yggdroot/indentLine'
 Plug 'ap/vim-css-color'
-Plug 'reedes/vim-colors-pencil'
+Plug 'apriendeau/vim-colors-pencil'
 Plug 'cespare/vim-toml'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Shougo/unite.vim'
 Plug 'mhinz/vim-grepper'
 Plug 'vim-scripts/SearchComplete'
 Plug 'Shougo/deoplete.nvim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'vim-airline/vim-airline-themes'
 
 """""""""""
 " languages
@@ -69,6 +69,7 @@ call plug#end()
 filetype plugin indent on
 let g:autoclose_on = 0
 let g:python3_host_prog = '/usr/local/bin/python3'
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 """"""""""""""""
 " Basic Settings
@@ -92,7 +93,7 @@ set backspace=indent,eol,start
 " Theming
 """""""""
 let g:airline_theme='colorline'
-let g:airline_powerline_fonts = 0
+let g:airline_powerline_fonts = 1
 set colorcolumn=120
 syntax on
 color pencil
