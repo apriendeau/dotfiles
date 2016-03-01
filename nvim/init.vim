@@ -2,74 +2,98 @@
 " Be iMproved
 """""""""""""
 if has('vim_starting')
-  set nocompatible				 " Be iMproved
+	set nocompatible " Be iMproved
 endif
 
 " Required:
 call plug#begin('~/.vim/plugged')
 
-"""""""""
-" Plugins
-"""""""""
+"""""""
+" Tools
+"""""""
 Plug 'tpope/vim-fugitive'
-Plug 'elzr/vim-json'
 Plug 'scrooloose/nerdtree'
-Plug 'pangloss/vim-javascript'
 Plug 'juvenn/mustache.vim'
 Plug 'mileszs/ack.vim'
 Plug 'scrooloose/syntastic'
-Plug 'vim-scripts/nginx.vim'
-Plug 'nathanaelkane/vim-indent-guides'
 Plug 'bling/vim-airline'
 Plug 'hlissner/vim-multiedit'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Raimondi/delimitMate'
 Plug 'godlygeek/tabular'
-Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'
 Plug 'tomtom/tcomment_vim'
 Plug 'Chiel92/vim-autoformat'
-Plug 'burnettk/vim-angular'
-Plug 'apriendeau/vim-colorline'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'sjl/vitality.vim'
 Plug 'mbbill/undotree'
 Plug 'Yggdroot/indentLine'
-Plug 'ap/vim-css-color'
-Plug 'apriendeau/vim-colors-pencil'
 Plug 'cespare/vim-toml'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Shougo/unite.vim'
 Plug 'mhinz/vim-grepper'
 Plug 'vim-scripts/SearchComplete'
-Plug 'Shougo/deoplete.nvim'
-Plug 'vim-airline/vim-airline-themes'
 
-"""""""""""
-" languages
-"""""""""""
-Plug 'markcornick/vim-terraform'
-Plug 'moll/vim-node'
-Plug 'maksimr/vim-jsbeautify'
+"""""""""
+" theming
+"""""""""
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'guns/xterm-color-table.vim'
+Plug 'apriendeau/pencil'
+Plug 'apriendeau/vim-colorline'
+
+""""""""
+" golang
+""""""""
 Plug 'fatih/vim-go'
+
+""""""
+" rust
+""""""
 Plug 'rust-lang/rust.vim'
+
+""""""""""""
+" javascript
+""""""""""""
+Plug 'elzr/vim-json'
+Plug 'pangloss/vim-javascript'
+Plug 'maksimr/vim-jsbeautify'
+Plug 'moll/vim-node'
+
+""""""
+" HTML
+""""""
+Plug 'burnettk/vim-angular'
+Plug 'othree/html5.vim'
+
+"""""
+" CSS
+"""""
+Plug 'cakebaker/scss-syntax.vim'
+
+"""""""""""""
+" MISC Syntax
+"""""""""""""
+Plug 'nvie/vim-flake8'
+Plug 'keith/swift.vim'
+Plug 'markcornick/vim-terraform'
 Plug 'saltstack/salt-vim'
 Plug 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
-Plug 'cakebaker/scss-syntax.vim'
-Plug 'othree/html5.vim'
 Plug 'ingydotnet/yaml-vim'
 Plug 'vim-scripts/nginx.vim'
-Plug 'vim-scripts/groovy.vim'
-Plug 'nvie/vim-flake8'
 
 " Required:
 call plug#end()
 
 " Required:
 filetype plugin indent on
-let g:autoclose_on = 0
 let g:python3_host_prog = '/usr/local/bin/python3'
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+""""""""
+" Neovim
+""""""""
+if has('nvim')
+	let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
 
 """"""""""""""""
 " Basic Settings
@@ -82,16 +106,17 @@ set noexpandtab
 set shiftwidth=0
 set laststatus=2
 set backspace=indent,eol,start
+let g:autoclose_on = 0
 
-""""""""""""
-" DEBUG ONLY
-""""""""""""
+"""""""""""""""
+" DEBUGGING VIM
+"""""""""""""""
 "set list
 "set listchars=tab:>-,eol:$ "Make tab characters and others visible
 
-"""""""""
-" Theming
-"""""""""
+""""""""""""""""
+" Theme Settings
+""""""""""""""""
 let g:airline_theme='colorline'
 let g:airline_powerline_fonts = 1
 set colorcolumn=120
@@ -118,17 +143,22 @@ set writebackup
 " WhiteSpace
 """"""""""""
 function! s:StripWhiteSpaces()
-  let save_cursor = getpos(".")
-  let old_query = getreg('/')
-  :%s/\s\+$//e
-  call setpos('.', save_cursor)
-  call setreg('/', old_query)
+	let save_cursor = getpos(".")
+	let old_query = getreg('/')
+	:%s/\s\+$//e
+	call setpos('.', save_cursor)
+	call setreg('/', old_query)
 endfunction
 
 autocmd BufWritePre * StripWhiteSpace
 command! -range=% StripWhiteSpaces :silent call <SID>StripWhiteSpaces()
 
+" Set link for vim-go
 set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
+
+""""""""""""""""
+" External files
+""""""""""""""""
 
 source $HOME/.config/nvim/vim_settings
 source $HOME/.config/nvim/vim_commands

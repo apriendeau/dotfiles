@@ -8,3 +8,4 @@ tmux/tmux-*
 **/secrets
 nvim/deoplete
 nvim/.init.vim-rplugin~
+ccentos5/*
