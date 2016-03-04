@@ -40,3 +40,6 @@ alias updateNeovim='brew reinstall --HEAD neovim'
 alias wtcommit='curl -s whatthecommit.com | grep "<p>" | sed s/\<p\>//g'
 alias bitly_squash="git fetch bitly && git rebase -i bitly/master"
 alias dm='docker-machine'
+
+# old vim
+alias ovim='VIMRUNTIME="/usr/local/share/vim/vim74" /usr/local/bin/vim'

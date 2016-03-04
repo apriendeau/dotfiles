@@ -41,6 +41,10 @@ function link {
 	fi
 }
 
+function home_clean {
+	rm -rf "${HOME}/.${1}"
+}
+
 function link_git {
 	link git/gitignore_global gitignore_global
 	link git/gitconfig gitconfig
@@ -49,10 +53,21 @@ function link_git {
 }
 
 function link_nvim {
-	link nvim vim
-	link nvim/init.vim vimrc
 	link nvim "config/nvim"
 	ln -s vim/bundles/ausokai/colors/ausokai.vim /usr/local/share/nvim/runtime/colors
+}
+
+function link_vim {
+	home_clean vim
+	home_clean vimrc
+	mkdir $HOME/.vim
+	link nvim/init.vim vimrc
+	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	files=(nvim/vim_*)
+	for file in "${files[@]}"; do
+		dest="${file/nvim/vim}"
+		link $file $dest
+	done
 }
 
 function link_tmux {
@@ -117,11 +132,15 @@ tmux)
 git)
 	link_git
 	;;
+vim)
+	link_vim
+	;;
 all)
 	link_git
 	link_nvim
 	link_zsh
 	link_git
+	link_vim
 	;;
 *)
 	cat <<USAGE
