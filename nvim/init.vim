@@ -69,16 +69,28 @@ Plug 'othree/html5.vim'
 """""
 Plug 'cakebaker/scss-syntax.vim'
 
-"""""""""""""
-" MISC Syntax
-"""""""""""""
+""""""""
+" Python
+""""""""
 Plug 'nvie/vim-flake8'
+
+"""""""
+" Swift
+"""""""
 Plug 'keith/swift.vim'
+
+"""""
+" Ops
+"""""
 Plug 'markcornick/vim-terraform'
 Plug 'saltstack/salt-vim'
 Plug 'docker/docker', {'rtp': '/contrib/syntax/vim/'}
-Plug 'ingydotnet/yaml-vim'
 Plug 'vim-scripts/nginx.vim'
+
+""""""
+" YAML
+""""""
+Plug 'ingydotnet/yaml-vim'
 
 " Required:
 call plug#end()
