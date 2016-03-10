@@ -6,7 +6,7 @@ if has('vim_starting')
 endif
 
 " Required:
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 """""""
 " Tools
@@ -31,7 +31,6 @@ Plug 'cespare/vim-toml'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Shougo/unite.vim'
 Plug 'mhinz/vim-grepper'
-Plug 'vim-scripts/SearchComplete'
 
 """""""""
 " theming
@@ -77,7 +76,7 @@ Plug 'nvie/vim-flake8'
 Plug 'keith/swift.vim'
 Plug 'markcornick/vim-terraform'
 Plug 'saltstack/salt-vim'
-Plug 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
+Plug 'docker/docker', {'rtp': '/contrib/syntax/vim/'}
 Plug 'ingydotnet/yaml-vim'
 Plug 'vim-scripts/nginx.vim'
 
