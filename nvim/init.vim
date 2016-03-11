@@ -154,19 +154,7 @@ set writebackup
 """"""""""""""""
 " External files
 """"""""""""""""
-let files = [
-	\'settings',
-	\'commands',
-	\'mappings',
-	\'syntax',
-	\'html',
-	\'golang',
-	\'python',
-	\'whitespace'
-	\]
-
-for file in files
-	let f = $HOME . "/.config/nvim/vim_" . file
+for f in split(glob('~/.config/nvim/vim_*'), '\n')
 	execute 'source' f
 endfor
 
