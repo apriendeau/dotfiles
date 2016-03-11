@@ -150,31 +150,23 @@ set backupskip=/tmp/*,/private/tmp/*
 set writebackup
 " autocmd FocusLost * :wa
 
-""""""""""""
-" WhiteSpace
-""""""""""""
-function! s:StripWhiteSpaces()
-	let save_cursor = getpos(".")
-	let old_query = getreg('/')
-	:%s/\s\+$//e
-	call setpos('.', save_cursor)
-	call setreg('/', old_query)
-endfunction
-
-autocmd BufWritePre * StripWhiteSpace
-command! -range=% StripWhiteSpaces :silent call <SID>StripWhiteSpaces()
-
-" Set link for vim-go
-set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
 
 """"""""""""""""
 " External files
 """"""""""""""""
+let files = [
+	\'settings',
+	\'commands',
+	\'mappings',
+	\'syntax',
+	\'html',
+	\'golang',
+	\'python',
+	\'whitespace'
+	\]
 
-source $HOME/.config/nvim/vim_settings
-source $HOME/.config/nvim/vim_commands
-source $HOME/.config/nvim/vim_mappings
-source $HOME/.config/nvim/vim_syntax
-source $HOME/.config/nvim/vim_html
-source $HOME/.config/nvim/vim_golang
-source $HOME/.config/nvim/vim_python
+for file in files
+	let f = $HOME . "/.config/nvim/vim_" . file
+	execute 'source' f
+endfor
+
