@@ -87,6 +87,11 @@ Plug 'saltstack/salt-vim'
 Plug 'docker/docker', {'rtp': '/contrib/syntax/vim/'}
 Plug 'vim-scripts/nginx.vim'
 
+""""""""""
+" Markdown
+""""""""""
+Plug 'tpope/vim-markdown'
+
 """"""
 " YAML
 """"""
