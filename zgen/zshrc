@@ -21,8 +21,8 @@ if ! zgen saved; then
 	zgen prezto tmux
 	zgen prezto osx
 	zgen prezto homebrew
-    zgen prezto command-not-found
-    zgen prezto syntax-highlighting
+	zgen prezto command-not-found
+	zgen prezto syntax-highlighting
 	zgen prezto history-substring-search
 
 	zgen load Tarrasch/zsh-colors

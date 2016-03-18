@@ -38,7 +38,7 @@ function parse_option {
 	local OPTION="$1"
 	local optarg="$2"
 
-    case $OPTION in
+	case $OPTION in
 		a)
 			git add .
 			FLAGS="${FLAGS}a"
@@ -59,7 +59,7 @@ function parse_option {
 		?)
 			usage
 			;;
-     esac
+	esac
 }
 function parse {
 	local OPTIONS="ab:dhv"
