@@ -6,4 +6,5 @@ au FileType python set tabstop=4
     \ | set autoindent
     \ | set fileformat=unix
 
-autocmd FileType python map <buffer> <F3> :call Flake8()<CR>
+autocmd FileType python map <buffer> <F3> :call Autopep8()<CR>
+

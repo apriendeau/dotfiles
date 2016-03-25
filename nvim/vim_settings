@@ -1,14 +1,13 @@
 """"""""""
 " Leader
 """"""""""
-
 let mapleader="\\"
 if exists('$TMUX')
-    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+	let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+	let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 else
-    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+	let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+	let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
 if has('nvim')
@@ -20,13 +19,11 @@ set guicursor+=i:blinkwait0
 """"""""""""
 " Nerdtree
 """"""""""""
-
 let NERDTreeAutoDeleteBuffer=1
 
 """"""""""""""""
 " indent-guides
 """"""""""""""""
-
 let g:indent_guides_auto_colors = 0
 hi IndentGuidesOdd  ctermbg=black
 hi IndentGuidesEven ctermbg=darkgrey
@@ -34,19 +31,18 @@ hi IndentGuidesEven ctermbg=darkgrey
 """"""""""""
 " Syntastic
 """"""""""""
-
 let g:syntastic_html_tidy_blocklevel_tags = [ 'slide' , 'hgroup', 'slides', 'aside', 'footer']
 
 let g:syntastic_stl_format = '[%pe line:%fe]'
+
 """""""""""
 " undotree
 """""""""""
-
 if has('persistent_undo')
-    set undofile                  " Save undo history to file
-    set undodir=~/.vim/tmp/undo/  " undo files in folder
-    set undolevels=100000         " Maximum number of undos
-    set undoreload=100000         " Save complete files for undo on reload if it has less lines than this
+	set undofile                  " Save undo history to file
+	set undodir=~/.vim/tmp/undo/  " undo files in folder
+	set undolevels=100000         " Maximum number of undos
+	set undoreload=100000         " Save complete files for undo on reload if it has less lines than this
 endif
 
 noremap <silent> <Leader>j :UndotreeToggle<cr>
@@ -69,4 +65,7 @@ let g:grepper = {}
 let g:grepper.tools = ['pt', 'grep', 'git', 'ag']
 let g:grepper.next_tool = '<leader>g'
 
-
+"""""""""
+" airline
+"""""""""
+let airline#extensions#default#section_use_groupitems = 0
