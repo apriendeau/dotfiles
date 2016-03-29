@@ -5,8 +5,11 @@ if has('vim_starting')
 	set nocompatible " Be iMproved
 endif
 
-" Required:
-call plug#begin('~/.config/nvim/plugged')
+if has('nvim')
+	call plug#begin('~/.config/nvim/plugged')
+else
+	call plug#begin('~/.vim/plugged')
+endif
 
 """""""
 " Tools
