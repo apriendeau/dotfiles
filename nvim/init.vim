@@ -100,6 +100,11 @@ Plug 'tpope/vim-markdown'
 """"""
 Plug 'ingydotnet/yaml-vim'
 
+""""""""
+" Github
+""""""""
+Plug 'mattn/gist-vim'
+
 " Required:
 call plug#end()
 

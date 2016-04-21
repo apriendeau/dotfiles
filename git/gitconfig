@@ -27,3 +27,5 @@
 	required = true
 [github]
 	user = apriendeau
+[http]
+	cookiefile = /Users/austin/.gitcookies
