@@ -104,6 +104,7 @@ Plug 'ingydotnet/yaml-vim'
 " Github
 """"""""
 Plug 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'
 
 " Required:
 call plug#end()
