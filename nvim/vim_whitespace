@@ -12,5 +12,3 @@ endfunction
 autocmd BufWritePre * StripWhiteSpace
 command! -range=% StripWhiteSpaces :silent call <SID>StripWhiteSpaces()
 
-" Set link for vim-go
-set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
