@@ -16,7 +16,6 @@ nmap <Leader><S-R> gg|:retab!<CR>
 """""""""""
 let NERDTreeIgnore = ['^\.git$', 'node_modules', "\.pyc$"]
 let NERDTreeShowHidden=1
-let NERDTreeMouseMode=1
 
 " For toggling
 noremap <Leader><Tab> :NERDTreeToggle<CR>
