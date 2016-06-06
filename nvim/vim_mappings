@@ -11,11 +11,6 @@ vmap <Leader>t: :Tabularize /:\zs<CR>
 
 nmap <Leader><S-R> gg|:retab!<CR>
 
-"""""""""""
-" NerdTree
-"""""""""""
-let NERDTreeIgnore = ['^\.git$', 'node_modules', "\.pyc$"]
-let NERDTreeShowHidden=1
 
 " For toggling
 noremap <Leader><Tab> :NERDTreeToggle<CR>

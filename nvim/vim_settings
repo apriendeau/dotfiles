@@ -21,6 +21,9 @@ set guicursor+=i:blinkwait0
 """"""""""""
 let NERDTreeAutoDeleteBuffer=1
 let g:NERDTreeMouseMode=3
+let NERDTreeIgnore = ['^\.git$', 'node_modules', "\.pyc$"]
+let NERDTreeShowHidden=1
+
 """"""""""""""""
 " indent-guides
 """"""""""""""""
