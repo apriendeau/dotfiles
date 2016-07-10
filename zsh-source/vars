@@ -20,7 +20,7 @@ export VIMRUNTIME=/usr/local/share/nvim/runtime
 # User configuration
 export EDITOR=nvim
 export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:"${PATH}"
-export PATH=":$GOROOT/bin:$GOPATH/bin:$USRLOCAL/bin:$USRLOCAL/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH=":$GOROOT/bin:$GOPATH/bin:$USRLOCAL/bin:$USRLOCAL/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/Users/austin/.cargo/bin"
 export PATH="$PATH:$HOME/.fzf/bin"
 
 #  Java
