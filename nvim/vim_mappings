@@ -26,7 +26,7 @@ noremap <Leader>h :sp<CR>
 """"""""""""
  " Easier moving between splits
 if has('nvim')
-	nmap <BS> <C-w>h
+  nmap <BS> <C-w>h
 endif
 
 nmap <C-k> :wincmd k<CR>
