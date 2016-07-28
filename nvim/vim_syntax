@@ -6,6 +6,8 @@ au BufRead,BufNewFile *.map
 au FileType map set tabstop=2
 	\ | set expandtab
 
+au Filetype go set tabstop=4
+
 " Vim file settings
 au BufNewFile,BufRead vim_* set filetype=vim
 
