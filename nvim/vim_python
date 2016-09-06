@@ -9,5 +9,5 @@ au FileType python set tabstop=4
 
 let g:autopep8_max_line_length=119
 
-autocmd FileType python map <buffer> <F3> :call Autopep8() | :call Flake8() <CR>
+autocmd BufWritePost *.py call Flake8()
 
