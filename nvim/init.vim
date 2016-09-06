@@ -76,6 +76,7 @@ Plug 'cakebaker/scss-syntax.vim'
 " Python
 """"""""
 Plug 'tell-k/vim-autopep8'
+Plug 'nvie/vim-flake8'
 
 """""""
 " Swift
