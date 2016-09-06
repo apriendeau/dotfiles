@@ -9,5 +9,7 @@ au FileType python set tabstop=4
 
 let g:autopep8_max_line_length=119
 
-autocmd BufWritePost *.py call Flake8()
+let g:syntastic_python_checkers=['flake8']
+" autocmd BufWritePost *.py call Flake8()
 
+" let g:syntastic_mode_map = { 'passive_filetypes': ['python'] }
