@@ -15,8 +15,8 @@ export GOPATH=$HOME/Go
 export GOBIN=$GOPATH/bin
 export GOVENDOREXPERIMENT=1
 
-# export VIMRUNTIME='/usr/local/share/vim/vim74'
-export VIMRUNTIME=/usr/local/share/nvim/runtime
+export VIMRUNTIME='/usr/local/share/vim/vim80'
+# export VIMRUNTIME=/usr/local/share/nvim/runtime
 # User configuration
 export EDITOR=nvim
 export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:"${PATH}"
