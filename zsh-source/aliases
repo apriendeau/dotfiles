@@ -41,6 +41,6 @@ alias bitly_squash="git fetch bitly && git rebase -i bitly/master"
 alias dm='docker-machine'
 
 #
-alias nvim='VIMRUNTIME=/usr/local/share/nvim/runtime /usr/local/bin/nvim'
+alias vim='VIMRUNTIME=/usr/local/share/nvim/runtime /usr/local/bin/nvim'
 
-alias vim='VIMRUNTIME=/usr/local/share/vim/vim80 /usr/local/bin/vim'
+alias ovim='VIMRUNTIME=/usr/local/share/vim/vim80 /usr/local/bin/vim'

@@ -44,7 +44,7 @@ apps)
 *)
 	cat <<USAGE
 $0 [command]
-brew		installing homebrew
+brew		install homebrew
 apps		install all apps
 USAGE
 	exit 64

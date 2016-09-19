@@ -1,0 +1,42 @@
+#! /bin/bash
+
+PREFIX='>>> '
+COLOR_RESET=$(tput sgr0 2> /dev/null)
+COLOR_INFO=$(tput setaf 6 2> /dev/null)
+COLOR_OK=$(tput setaf 2 2> /dev/null)
+COLOR_WARN=$(tput setaf 3 2> /dev/null)
+COLOR_ERR=$(tput setaf 1 2> /dev/null)
+COLOR_CMD=$(tput setaf 5 2> /dev/null)
+BANNER_FMT="$COLOR_CMD$PREFIX%s %s %s$COLOR_RESET"
+BANNER_EOL='\n'
+PWD=$(pwd)
+PIPS="neovim jedi"
+
+
+function banner {
+	printf "$BANNER_FMT""$BANNER_EOL" "$COLOR_CMD$1" "$2" "$3"
+}
+
+function banner_info {
+	printf "$BANNER_FMT""$BANNER_EOL" "$COLOR_CMD$COLOR_INFO" "$1"
+}
+
+function missing {
+	pip install $PIPS
+	pip3 install $PIPS
+}
+
+function upgrade {
+	pip install --upgrade $PIPS
+	pip3 install --upgrade $PIPS
+}
+
+case $1 in
+missing)
+	install_python_pips
+	;;
+*)
+	cat <<USAGE
+missing		install missing pip packages
+upgrade 	upgrade all the pips
+USAGE
