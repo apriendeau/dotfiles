@@ -81,3 +81,9 @@ let g:grepper.next_tool = '<leader>g'
 " airline
 """""""""
 let airline#extensions#default#section_use_groupitems = 0
+
+"""""""""
+" preview
+"""""""""
+
+set completeopt-=preview
