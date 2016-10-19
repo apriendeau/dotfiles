@@ -22,9 +22,9 @@
     hard = !"git reset --hard"
 	head = !"git reset HEAD"
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
 	required = true
+	smudge = git-lfs smudge -- %f
+	clean = git-lfs clean -- %f
 [github]
 	user = apriendeau
 [http]
