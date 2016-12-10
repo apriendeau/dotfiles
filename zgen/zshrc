@@ -46,6 +46,6 @@ bindkey -e
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
-
+ssh-add -A 2>/dev/null;
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
