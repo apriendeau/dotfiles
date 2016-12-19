@@ -11,8 +11,6 @@ nvim/.init.vim-rplugin~
 tmux/tmux
 tmux/plugins
 
-tmux/tmux-*
-
 **/secrets
 
 ccentos5/*
