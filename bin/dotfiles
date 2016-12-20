@@ -57,12 +57,16 @@ function link_nvim {
 	ln -s vim/bundles/ausokai/colors/ausokai.vim /usr/local/share/nvim/runtime/colors
 }
 
+function install_plug {
+	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+}
+
 function link_vim {
 	home_clean vim
 	home_clean vimrc
 	mkdir $HOME/.vim
 	link nvim/init.vim vimrc
-	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	install_plug
 	files=(nvim/vim_*)
 	for file in "${files[@]}"; do
 		dest="${file/nvim/vim}"
@@ -120,6 +124,9 @@ install_deoplete)
 update_deoplete)
 	update_deoplete
 	;;
+install_plug)
+	install_plug
+	;;
 zsh)
 	link_zsh
 	;;
@@ -145,7 +152,18 @@ all)
 *)
 	cat <<USAGE
 $0 [command]
-zsh		remove zsh related files and resource them
+zsh			remove zsh related files & symlink
+nvim			remove nvim related files & symlink
+tmux			remove tmux related files & symlink
+vim			remove vim related files & symlink
+git			remove git related files & symlink
+
+all			runs zsh, vim, nvim, tmux, zsh
+
+install_deoplete 	installs deoplete for nvim
+update_deoplete 	runs all the update scripts for deoplete
+
+install_plug		installs nvim dependency manager
 USAGE
 	exit 64
 	;;
