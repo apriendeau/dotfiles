@@ -1,0 +1,6 @@
+alias vim='VIMRUNTIME=/usr/share/nvim/runtime /usr/bin/nvim'
+alias ovim='VIMRUNTIME=/usr/share/vim/vim80 /usr/bin/vim'
+
+alias ls="ls -G"
+alias ll="ls -Gla"
+alias la="ls -Ga"
