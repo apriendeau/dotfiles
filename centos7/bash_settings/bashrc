@@ -1,0 +1,16 @@
+# .bashrc
+
+# User specific aliases and functions
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+PATH=$HOME/gopath/go1.7.1/bin:$PATH
+
+source $HOME/dotfiles/centos7/bash_settings/aliases
