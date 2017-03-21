@@ -21,7 +21,7 @@ set guicursor+=i:blinkwait0
 """"""""""""
 let NERDTreeAutoDeleteBuffer=1
 let g:NERDTreeMouseMode=2
-let NERDTreeIgnore = ['^\.git$', 'node_modules', "\.pyc$"]
+let NERDTreeIgnore = ['^\.git$', 'node_modules', "\.pyc$", ".DS_Store"]
 let NERDTreeShowHidden=1
 
 """"""""""""""""
@@ -34,18 +34,18 @@ hi IndentGuidesEven ctermbg=darkgrey
 """"""""""""
 " Syntastic
 """"""""""""
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 
-let g:syntastic_html_tidy_blocklevel_tags = [ 'slide' , 'hgroup', 'slides', 'aside', 'footer']
-
-let g:syntastic_stl_format = '[%pe line:%fe]'
+" let g:syntastic_html_tidy_blocklevel_tags = [ 'slide' , 'hgroup', 'slides', 'aside', 'footer']
+" let g:syntastic_disabled_filetypes=['html']
+" let g:syntastic_stl_format = '[%pe line:%fe]'
 
 """""""""""
 " undotree
@@ -63,6 +63,7 @@ noremap <silent> <Leader>j :UndotreeToggle<cr>
 " deoplete
 """"""""""
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#complete_method = 'omnifunc'
 
 """""""
 " json
