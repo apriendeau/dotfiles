@@ -14,14 +14,15 @@ if has('nvim')
 	let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 endif
 
-set guicursor+=i:blinkwait0
-
+set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
+                  \,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
+                  \,sm:block-blinkwait175-blinkoff150-blinkon175
 """"""""""""
 " Nerdtree
 """"""""""""
 let NERDTreeAutoDeleteBuffer=1
 let g:NERDTreeMouseMode=2
-let NERDTreeIgnore = ['^\.git$', 'node_modules', "\.pyc$", ".DS_Store"]
+let NERDTreeIgnore = ['^\.git$', 'node_modules', "\.pyc$", "\.DS_Store"]
 let NERDTreeShowHidden=1
 
 """"""""""""""""
@@ -46,6 +47,7 @@ hi IndentGuidesEven ctermbg=darkgrey
 " let g:syntastic_html_tidy_blocklevel_tags = [ 'slide' , 'hgroup', 'slides', 'aside', 'footer']
 " let g:syntastic_disabled_filetypes=['html']
 " let g:syntastic_stl_format = '[%pe line:%fe]'
+"
 
 """""""""""
 " undotree

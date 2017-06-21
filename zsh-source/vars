@@ -27,3 +27,4 @@ export PATH="$PATH:$HOME/.fzf/bin"
 export ANDROID_HOME=/usr/local/opt/android-sdk
 export XDG_CONFIG_HOME="$HOME/.config"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home"
+
