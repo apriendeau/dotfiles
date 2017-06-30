@@ -40,7 +40,4 @@ alias wtcommit='curl -s whatthecommit.com | grep "<p>" | sed s/\<p\>//g'
 alias bitly_squash="git fetch bitly && git rebase -i bitly/master"
 alias dm='docker-machine'
 
-#
-alias vim='VIMRUNTIME=/usr/local/share/nvim/runtime /usr/local/bin/nvim'
 
-alias ovim='VIMRUNTIME=/usr/local/share/vim/vim80 /usr/local/bin/vim'

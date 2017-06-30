@@ -65,9 +65,9 @@ function link_vim {
 	home_clean vim
 	home_clean vimrc
 	mkdir $HOME/.vim
-	link nvim/init.vim vimrc
+	link vimrc vimrc
 	install_plug
-	files=(nvim/vim_*)
+	files=(vim/vim_*)
 	for file in "${files[@]}"; do
 		dest="${file/nvim/vim}"
 		link $file $dest
