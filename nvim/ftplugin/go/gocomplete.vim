@@ -1,1 +1,0 @@
-/Users/austin/Go/src/github.com/nsf/gocode/vim/ftplugin/go/gocomplete.vim

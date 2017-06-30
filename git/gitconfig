@@ -1,6 +1,6 @@
 [user]
-    name = Austin Riendeau
-	email = austin@apriendeau.com
+	name = Austin Riendeau
+	email = ar@bit.ly
 [filter "media"]
 	required = true
 	clean = git-media-clean %f
@@ -9,8 +9,8 @@
 	templatedir = ~/.git_template
 	excludesfile = ~/.gitignore_global
 [core]
-    editor = nvim
-	excludesfile = /Users/austin/.gitignore_global
+	editor = nvim
+		excludesfile = /Users/austin/.gitignore_global
 [push]
 	default = current
 [filter "hawser"]
@@ -27,7 +27,7 @@
 	clean = git-lfs clean -- %f
 [github]
 	user = apriendeau
-	accesstoken = 
+	accesstoken = dbe3f3fa9b4fb9ae97d3249c924892f4da248abd
 [jira]
 	username = ar@bit.ly
 [http]

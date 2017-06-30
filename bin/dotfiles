@@ -53,8 +53,8 @@ function link_git {
 }
 
 function link_nvim {
-	link nvim "config/nvim"
-	ln -s vim/bundles/ausokai/colors/ausokai.vim /usr/local/share/nvim/runtime/colors
+	link vim "config/nvim"
+	ln -s ${PWD}/vimrc $HOME/.config/.init.vim
 }
 
 function install_plug {

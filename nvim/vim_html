@@ -1,3 +1,0 @@
-" Html
-autocmd FileType html set shiftwidth=2
-autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
