@@ -27,7 +27,7 @@
 	clean = git-lfs clean -- %f
 [github]
 	user = apriendeau
-	accesstoken = dbe3f3fa9b4fb9ae97d3249c924892f4da248abd
+	accesstoken = 
 [jira]
 	username = ar@bit.ly
 [http]
