@@ -13,7 +13,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
 
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'tell-k/vim-autopep8'
 Plug 'nvie/vim-flake8'
 
@@ -28,7 +28,8 @@ Plug 'elzr/vim-json'
 Plug 'apriendeau/pencil'
 Plug 'apriendeau/vim-colorline'
 Plug 'jiangmiao/auto-pairs'
-Plug 'Shougo/neocomplete.vim'
+Plug 'maralla/completor.vim'
+Plug 'leafgarland/typescript-vim'
 Plug 'w0rp/ale'
 
 " Required:
@@ -80,7 +81,7 @@ au FileType python set tabstop=4
   \ | set fileformat=unix
 
 let g:autopep8_max_line_length=119
-let g:syntastic_python_checkers=['flake8']
+let g:completor_gocode_binary = "/root/gopath/go1.8.3/bin/gocode"
 
 """""""""""""
 " markdown
@@ -128,10 +129,18 @@ map <C-0> :tablast<CR>
 nnoremap <C-t> :tabnew<CR>
 inoremap <C-t> <Esc>:tabnew<CR>
 
+"""""""""""""""""""""""
+" better mouse support
+"""""""""""""""""""""""
+if has("mouse_sgr")
+    set ttymouse=sgr
+else
+    set ttymouse=xterm2
+end
+
 """"""""""""""""
 " External files
 """"""""""""""""
 for f in split(glob('~/.vim/vim_*'), '\n')
   execute 'source' f
 endfor
-

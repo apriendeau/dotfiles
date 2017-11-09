@@ -31,6 +31,15 @@ let g:vim_json_syntax_conceal = 0
 """""""""
 let airline#extensions#default#section_use_groupitems = 0
 
+""""""""""""""""""
+" buffer switching
+""""""""""""""""""
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+
 """""""""""""""""
 " Temporary files
 """""""""""""""""
@@ -45,6 +54,9 @@ set writebackup
 " autocmd FocusLost * :wa
 
 
+""""""""""
+" ALE
+""""""""""
 let g:ale_linters = {
 \   'go': ['go vet', 'go build', 'gofmt', 'staticcheck', 'staticcheck'],
 \}
