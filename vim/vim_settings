@@ -43,3 +43,10 @@ set backupskip=/tmp/*,/private/tmp/*
 "create backup when saving a file,for when vim crashes trying to save a file
 set writebackup
 " autocmd FocusLost * :wa
+
+
+let g:ale_linters = {
+\   'go': ['go vet', 'go build', 'gofmt', 'staticcheck', 'staticcheck'],
+\}
+let g:airline#extensions#ale#enabled = 1
+let g:ale_lint_on_text_changed = 'never'

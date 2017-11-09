@@ -9,8 +9,8 @@
 	templatedir = ~/.git_template
 	excludesfile = ~/.gitignore_global
 [core]
-	editor = nvim
-		excludesfile = /Users/austin/.gitignore_global
+	editor = vim
+	excludesfile = /Users/austin/.gitignore_global
 [push]
 	default = current
 [filter "hawser"]
@@ -27,7 +27,7 @@
 	clean = git-lfs clean -- %f
 [github]
 	user = apriendeau
-	accesstoken = 
+	accesstoken = a31b3477ad40708eebd8fe9c07f971019cdaad90
 [jira]
 	username = ar@bit.ly
 [http]

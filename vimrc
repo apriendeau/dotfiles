@@ -11,7 +11,6 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree'
 
 Plug 'fatih/vim-go'
@@ -30,6 +29,7 @@ Plug 'apriendeau/pencil'
 Plug 'apriendeau/vim-colorline'
 Plug 'jiangmiao/auto-pairs'
 Plug 'Shougo/neocomplete.vim'
+Plug 'w0rp/ale'
 
 " Required:
 call plug#end()
