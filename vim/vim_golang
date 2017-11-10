@@ -23,6 +23,7 @@ au FileType go nmap <Leader>rs <Plug>(go-run-split)
 au FileType go nmap <Leader>rv <Plug>(go-run-vertical)
 
 let g:go_fmt_command = "goimports"
+let g:completor_gocode_binary = "/Users/austin/Go/bin/gocode"
 
 let g:go_list_type = "quickfix"
 
