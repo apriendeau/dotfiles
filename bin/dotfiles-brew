@@ -2,8 +2,7 @@
 
 ESSENTIALS_APPS="vim curl git wget tree autojump autoconf automake mercurial tmux tmux-mem-cpu-load grep the_platinum_searcher "
 LANGUAGES="python3 python rust node go lua"
-SECONDARY_APPS="nginx saltstack docker docker-machine docker-swarm docker-compose zeromq"
-GUI_APPS="chrome firefox iterm2 1password limechat rdio hipchat razer-synapse viscosity virtualbox appcleaner transmit"
+GUI_APPS="chrome firefox iterm2 slack virtualbox appcleaner"
 PREFIX='>>> '
 COLOR_RESET=$(tput sgr0 2> /dev/null)
 COLOR_INFO=$(tput setaf 6 2> /dev/null)
