@@ -21,6 +21,7 @@ export EDITOR=nvim
 export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:$HOME/Library/Android/sdk/platform-tools:"${PATH}"
 export PATH=":$GOROOT/bin:$GOPATH/bin:$USRLOCAL/bin:$USRLOCAL/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/Users/austin/.cargo/bin"
 export PATH="$PATH:$HOME/.fzf/bin"
+export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 #  Java
 export ANDROID_HOME=/usr/local/opt/android-sdk
