@@ -41,6 +41,10 @@ function link {
 	fi
 }
 
+function link_command {
+	link $1 $2
+}
+
 function home_clean {
 	rm -rf "${HOME}/.${1}"
 }
@@ -86,14 +90,16 @@ function tpm {
 }
 
 function link_zsh {
-	git clone git@github.com:tarjoilija/zgen.git tmp-zgen
-	unlink zgen
-	mv tmp-zgen ${HOME}/.zgen
-	link zgen/zshrc zshrc
-	link zsh-source zsh-source
-	source ${HOME}/.zshrc
-	link_prompt
-	source ${HOME}/.zshrc
+	export ZPLUG_HOME=${HOME}/.zplug
+	rm -rf $ZPLUG_HOME
+	git clone https://github.com/zplug/zplug $ZPLUG_HOME
+	link zplug/zshrc zshrc
+	link zsh-source
+	source $HOME/.zshrc
+	echo "Open a new shell and run these commands in this order:"
+	echo "zplug install zplug/zplug"
+	echo "zplug install sorin-ionescu/prezto"
+	echo "zplug install apriendeau/prezto-slim-prompt"
 }
 
 function install_deoplete {
@@ -148,6 +154,9 @@ all)
 	link_zsh
 	link_git
 	link_vim
+	;;
+link)
+	link_command $2 $3
 	;;
 *)
 	cat <<USAGE

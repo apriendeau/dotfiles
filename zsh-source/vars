@@ -2,8 +2,6 @@
 #
 
 export VAGRANT_DEFAULT_PROVIDER="virtualbox"
-# export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
-# export VAGRANT_VMWARE_FUSION_APP="/Applications/VMware Fusion.app"
 
 # ansible settings
 export ANSIBLE_COW_SELECTION=tux
@@ -16,10 +14,11 @@ export GOBIN=$GOPATH/bin
 export GOVENDOREXPERIMENT=1
 
 export VIMRUNTIME='/usr/local/share/vim/vim80'
+
 # User configuration
 export EDITOR=nvim
 export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:$HOME/Library/Android/sdk/platform-tools:"${PATH}"
-export PATH=":$GOROOT/bin:$GOPATH/bin:$USRLOCAL/bin:$USRLOCAL/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/Users/austin/.cargo/bin"
+export PATH=":$GOROOT/bin:$GOPATH/bin:$USRLOCAL/bin:$USRLOCAL/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="$PATH:$HOME/.fzf/bin"
 export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
