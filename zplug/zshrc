@@ -6,6 +6,8 @@ export EVENT_NOKQUEUE=1
 export NVM_DIR="/Users/austin/.nvm"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
+
+
 zmodload zsh/zprof
 
 zplug "zplug/zplug"
@@ -21,6 +23,9 @@ zplug "apriendeau/prezto-slim-prompt", \
 
 zstyle ':prezto:*:*' color 'yes'
 zstyle ':prezto:load' pmodule \
+  'history-substring-search' \
+  'git' \
+  'docker' \
   'environment' \
   'terminal' \
   'editor' \
@@ -37,11 +42,7 @@ zstyle ':prezto:load' pmodule \
 zstyle ':prezto:module:editor' key-bindings 'vi'
 zstyle ':prezto:module:prompt' theme 'slim'
 
-zplug "$HOME/.zsh-source/aliases", from:local
-zplug "$HOME/.zsh-source/keybinding", from:local
-zplug "$HOME/.zsh-source/vars", from:local
-zplug "$HOME/.zsh-source/secrets", from:local
-zplug "$HOME/.zsh-source/functions", from:local
+alias vim="nvim"
 
 # Custom zsh configuration
 zplug "~/.zsh", \

@@ -94,7 +94,7 @@ function link_zsh {
 	rm -rf $ZPLUG_HOME
 	git clone https://github.com/zplug/zplug $ZPLUG_HOME
 	link zplug/zshrc zshrc
-	link zsh-source
+	link zsh
 	source $HOME/.zshrc
 	echo "Open a new shell and run these commands in this order:"
 	echo "zplug install zplug/zplug"

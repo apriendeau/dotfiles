@@ -18,7 +18,7 @@ export VIMRUNTIME='/usr/local/share/vim/vim80'
 # User configuration
 export EDITOR=nvim
 export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:$HOME/Library/Android/sdk/platform-tools:"${PATH}"
-export PATH=":$GOROOT/bin:$GOPATH/bin:$USRLOCAL/bin:$USRLOCAL/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH=":$GOROOT/bin:$GOPATH/bin:$USRLOCAL/bin:$USRLOCAL/sbin:$HOME/.rbenv/versions/2.6.3/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="$PATH:$HOME/.fzf/bin"
 export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
