@@ -26,18 +26,17 @@ zstyle ':prezto:load' pmodule \
   'docker' \
   'environment' \
   'terminal' \
-  'editor' \
   'history' \
-  'directory' \
   'utility' \
   'completion' \
   'prompt' \
   'osx' \
-  'python' \
   'fasd' \
   'tmux'
-
-zstyle ':prezto:module:editor' key-bindings 'vi'
+  #  'python' \
+  #  'directory' \
+#  'editor' \
+# zstyle ':prezto:module:editor' key-bindings 'vi'
 zstyle ':prezto:module:prompt' theme 'slim'
 
 # Custom zsh configuration
