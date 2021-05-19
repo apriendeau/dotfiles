@@ -24,7 +24,7 @@ zinit snippet PZT::modules/completion
 
 
 zinit ice svn; zinit snippet PZT::modules/fasd
-zinit ice svn; zinit snippet PZT::modules/git
+zinit ice svn pick:"init.zsh"; zinit snippet PZT::modules/git
 zinit ice svn; zinit snippet PZT::modules/docker
 
 zinit light apriendeau/prezto-slim-prompt
@@ -33,7 +33,6 @@ zinit ice silent atload'prompt slim'
 zinit snippet PZT::modules/prompt
 
 zinit snippet PZT::modules/helper/init.zsh
-
 
 setopt promptsubst
 
