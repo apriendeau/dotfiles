@@ -1,61 +1,39 @@
-export ZPLUG_HOME=$HOME/.zplug
-source $ZPLUG_HOME/init.zsh
-export PATH=/usr/local/bin:/bin:/usr/bin:$PATH
-export TERM=xterm-256color
-export EVENT_NOKQUEUE=1
-export NVM_DIR="/Users/austin/.nvm"
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+source "$HOME/.zinit/bin/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
 
-zmodload zsh/zprof
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zinit-zsh/z-a-rust \
+    zinit-zsh/z-a-as-monitor \
+    zinit-zsh/z-a-patch-dl \
+    zinit-zsh/z-a-bin-gem-node
 
-zplug "zplug/zplug"
-
-# Prezto framework
-zplug "sorin-ionescu/prezto", \
-  use:"init.zsh", \
-  hook-build:"ln -s $ZPLUG_HOME/repos/sorin-ionescu/prezto ~/.zprezto"
-
-zplug "apriendeau/prezto-slim-prompt", \
-  from:github, \
-  hook-build:"cp $ZPLUG_HOME/repos/apriendeau/prezto-slim-prompt/prompt_slim_setup $ZPLUG_HOME/repos/sorin-ionescu/prezto/modules/prompt/functions"
-
-zstyle ':prezto:*:*' color 'yes'
-zstyle ':prezto:load' pmodule \
-  'history-substring-search' \
-  'git' \
-  'docker' \
-  'environment' \
-  'terminal' \
-  'history' \
-  'utility' \
-  'completion' \
-  'prompt' \
-  'osx' \
-  'fasd' \
-  'tmux'
-  #  'python' \
-  #  'directory' \
-#  'editor' \
-# zstyle ':prezto:module:editor' key-bindings 'vi'
-zstyle ':prezto:module:prompt' theme 'slim'
-
-# Custom zsh configuration
-zplug "~/.zsh", \
-  use:"*.zsh", \
-  from:local
-
-zplug load
-
+### End of Zinit's installer chunk
 bindkey -e
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+zinit snippet PZT::modules/tmux
+zinit snippet PZT::modules/environment
+zinit snippet PZT::modules/terminal
+zinit snippet PZT::modules/history
+zinit snippet PZT::modules/utility
+zinit snippet PZT::modules/completion
 
-ssh-add -A 2>/dev/null;
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-eval "$(rbenv init -)"
+zinit ice svn; zinit snippet PZT::modules/fasd
+zinit ice svn; zinit snippet PZT::modules/git
+zinit ice svn; zinit snippet PZT::modules/docker
+
+zinit light apriendeau/prezto-slim-prompt
+zinit ice silent atload'prompt slim'
+# load the prompt
+zinit snippet PZT::modules/prompt
+
+zinit snippet PZT::modules/helper/init.zsh
+
+
+setopt promptsubst
+
