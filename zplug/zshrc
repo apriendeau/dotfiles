@@ -8,12 +8,15 @@ zinit light-mode for \
     zinit-zsh/z-a-rust \
     zinit-zsh/z-a-as-monitor \
     zinit-zsh/z-a-patch-dl \
+    zinit-zsh/z-a-submods \
     zinit-zsh/z-a-bin-gem-node
 
 ### End of Zinit's installer chunk
 bindkey -e
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+
+zinit snippet PZT::modules/helper/init.zsh
 
 zinit snippet PZT::modules/tmux
 zinit snippet PZT::modules/environment
@@ -23,16 +26,30 @@ zinit snippet PZT::modules/utility
 zinit snippet PZT::modules/completion
 
 
-zinit ice svn; zinit snippet PZT::modules/fasd
-zinit ice svn pick:"init.zsh"; zinit snippet PZT::modules/git
+zinit ice svn submods'zsh-users/zsh-history-substring-search -> external';
+zinit snippet PZT::modules/history-substring-search
+
 zinit ice svn; zinit snippet PZT::modules/docker
+zinit ice svn pick:"init.zsh"; zinit snippet PZT::modules/git
+zinit ice git; zinit snippet PZT::modules/prompt
+zinit ice git; zinit snippet PZT::modules/fasd
 
-zinit light apriendeau/prezto-slim-prompt
+zinit ice pick"prompt_slim_setup"; zplugin light apriendeau/prezto-slim-prompt
 zinit ice silent atload'prompt slim'
-# load the prompt
-zinit snippet PZT::modules/prompt
 
-zinit snippet PZT::modules/helper/init.zsh
+
+export GOROOT=/usr/local/opt/go/libexec
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export PATH=$GOBIN:$PATH
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+source <(kubectl completion zsh) 
+alias k="kubectl"
+alias j='fasd_cd -d'
 
 setopt promptsubst
 
